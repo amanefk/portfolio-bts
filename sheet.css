@@ -1,0 +1,333 @@
+
+@font-face {
+    font-family: '';
+    src: url('') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+.bg-pastel-rose {
+    background-color: #FFD7ED !important;
+  }
+  .bg-pastel-bleu {
+    background-color: #B3E5FC !important;
+  }
+  .bg-pastel-violet {
+    background-color: #C8B6FF !important;
+  }
+  .text-pastel-violet {
+    color: #AF7EFF !important;
+  }
+  .text-pastel-bleu {
+    color: #0900f4 !important;
+  }
+  .rounded-lg {
+    border-radius: 1rem !important;
+  }
+  .spacer-custom {
+    margin-top: 78px; /* ajuste la valeur selon le besoin */
+  }
+  
+  .neon-rose {
+    color: #FFB6E6;
+    text-shadow:
+      0 0 8px #FFB6E6,
+      0 0 24px #AF7EFF,
+      0 0 40px #B3E5FC;
+  }
+  
+  
+ /*NAVBAR */
+
+  .navbar {
+    background-color: #FFD7ED;
+    box-shadow: 0 5px 20px -8px #AF7EFF77;
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+  }
+  
+  .navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #AF7EFF !important;
+    letter-spacing: 1px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    color: #AF7EFF  !important;
+    margin: 0 8px;
+    transition: background 0.2s, color 0.2s;
+    padding: 0.5rem 1.2rem;
+    background-color: #FFD7ED20; /* léger fond rose à l'état normal */
+  }
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    background: #C8B6FF88;       /* violet pastel en hover */
+    color: #0900f4 !important;   /* accent violet tech */
+    text-shadow: 0 1px 12px #AF7EFF44;
+  }
+  
+  /* Pour le bouton hamburger sur mobile */
+  .navbar-toggler {
+    background: #FFB6E6 !important;
+    border-radius: 50%;
+    border: none;
+  }
+  
+
+  /* Section CV principale */
+    .resume.section {
+    background-color: #FFD7ED ;
+    border-radius: 2.5rem;
+    box-shadow: 0 8px 40px -12px #AF7EFF44;
+    padding: 48px 24px;
+  }
+  
+  /* Titres principaux */
+
+  .resume-title {
+    font-size: 2rem;
+    color: #AF7EFF;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 12px #C8B6FF55;
+  }
+  
+  /* Sous-titres & légendes */
+  .resume-content h4,
+  .resume-content h5,
+  .institution {
+    color: #54A3FF;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  /* Encadré item (exp, formation) */
+  .resume-item {
+    background: #fee5f3;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 12px #FFD7ED55;
+    padding: 32px 24px;
+    margin-bottom: 32px;
+    border-left: 8px solid #b190e299;
+    transition: box-shadow 0.3s;
+  }
+  .resume-item:hover {
+    box-shadow: 0 8px 24px #AF7EFF33;
+  }
+  
+  /* Timeline/année */
+  .resume-content h5 {
+    font-size: 1.1rem;
+    color: #AF7EFF;
+    background: #FFD7ED88;
+    border-radius: 8px;
+    padding: 2px 16px;
+    display: inline-block;
+    margin-bottom: 4px;
+  }
+  
+  /* Progress bar compétences BTS SIO SISR */
+  .progress {
+    height: 16px;
+    border-radius: 7px;
+    background: linear-gradient(90deg, #FFD7ED 60%, #C8B6FF 100%);
+    box-shadow: 0 1px 5px #AF7EFF22;
+    margin-bottom: 16px;
+  }
+  
+  .progress-bar {
+    background: linear-gradient(90deg, #AF7EFF 40%, #54A3FF 100%);
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 7px;
+    box-shadow: 0 2px 8px #AF7EFF33;
+    transition: width 0.6s;
+  }
+  
+  /* Liste des tâches et compétences */
+  .resume-content ul {
+    padding-left: 24px;
+    margin-bottom: 0;
+  }
+  .resume-content li {
+    color: #6D4AFF;
+    font-size: 1.08rem;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    position: relative;
+  }
+  
+  .resume-content li::before {
+    content: '';
+    position: absolute;
+    left: -18px;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(45deg,#FFD7ED, #AF7EFF);
+    border-radius: 100%;
+    box-shadow: 0 2px 6px #AF7EFF22;
+  }
+  
+  /* Déco sur la section-title */
+  .section-title h2 {
+    color: #AF7EFF;
+    text-shadow: 0 2px 14px #FFD7ED66;
+  }
+  .section-title p {
+    color: #02020d;
+    margin-top: 12px;
+    margin-bottom: 30px;
+    font-size: 1.15rem;
+  }
+
+  .section-titre {
+    font-family: Roboto Mono ;
+  }
+  
+  /* Présentation BTS */
+
+  /* Section Formation BTS SIO, pastel / girly / tech */
+.formation-sio {
+  background: linear-gradient(135deg, #fde8ec 0%, #e2eafd 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 14px 0 rgba(237,175,193,0.09), 0 2px 8px 0 rgba(140,180,255,0.10);
+  padding: 40px 25px;
+  margin: 32px auto;
+  max-width: 900px;
+}
+
+.section-title {
+  font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
+  color: #e54298;
+  text-shadow: 0 2px 6px #fff8fa;
+  font-size: 2.2rem;
+  margin-bottom: 35px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.sio-container {
+  font-size: 1.07rem;
+  color: #3d2553;
+  font-family: 'Nunito', 'Montserrat', Arial, sans-serif;
+}
+
+.sio-options {
+  display: flex;
+  gap: 45px;
+  margin: 28px 0 15px 0;
+  flex-wrap: wrap;
+}
+.option {
+  flex: 1 1 270px;
+  background: #fff6fa;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px #edf3fe40;
+  padding: 22px 20px;
+  margin-bottom: 16px;
+  border-left: 6px solid #e54298;
+  transition: box-shadow 0.3s;
+}
+.option h3 {
+  font-size: 1.2rem;
+  color: #e54298;
+  margin-bottom: 9px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.option.slam { border-left-color: #e54298; }
+.option.sisr { border-left-color: #7b7df9; }
+.option.sisr h3 { color: #7b7df9; }
+
+.formation-sio em {
+  color: #ad7ed6;
+  font-size: 1rem;
+  font-style: italic;
+  background: #f3ecfd;
+  padding: 5px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+ /* TIMELINE */
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFD7ED;
+  min-height: 100vh;
+  padding: 100px 0;
+  font-family: Jost;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: #fee5f3;
+  -webkit-box-shadow: 5px 5px 10px #C8B6FF, -5px -5px 10px #C8B6FF;
+          box-shadow: 5px 5px 10px #C8B6FF, -5px -5px 10px #C8B6FF;
+  border-radius: 5px;
+  color: #0900f4;
+  padding: 1.75rem;
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+  margin: 1rem;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.timeline-component {
+  margin: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, #d60f96, #c10c87, #990b6b);
+    width: 3px;
+    height: 100%;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}

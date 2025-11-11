@@ -29,15 +29,19 @@
   }
   
   .neon-rose {
-    color: #FFB6E6;
+    color: #f6c1e3;
     text-shadow:
       0 0 8px #FFB6E6,
-      0 0 24px #AF7EFF,
-      0 0 40px #B3E5FC;
+      0 0 24px #6721d0,
+      0 0 40px #fff;
   }
   
   .bg-pastel-neon {
     background-color: #FFB6E6;
+  }
+
+  .bg-pastel-light-rose {
+    background-color: #fee5f3 !important;
   }
   
  /*NAVBAR */
@@ -561,3 +565,99 @@
 		gap: 2rem;
 	}
 }
+
+/* EPREUVES */
+
+
+.synthese-btn {
+  transition: box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 2px 12px #388bfd33;
+}
+.synthese-btn:hover {
+  background: #FFD7ED;
+  box-shadow: 0 4px 24px #388bfd55;
+}
+
+.epreuve-item {
+  background-color: #FFD7ED ;
+  border-radius: 2.5rem;
+  box-shadow: 0 8px 40px -12px #AF7EFF44;
+  padding: 48px 24px;
+}
+
+.epreuve-item:hover {
+  box-shadow: 0 8px 32px #AF7EFF77;
+}
+
+.epreuve-title {
+  font-size: 2.1rem;
+  font-family: 'Montserrat', 'Jost', Arial, sans-serif;
+  color: #AF7EFF;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px #C8B6FF66;
+}
+
+.epreuve-meta .badge {
+  background: #C8B6FF;
+  color: #0900f4;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 8px;
+  box-shadow: 0 2px 6px #FFD7ED44;
+}
+
+.epreuve-description {
+  background: #fff6fa; /* blanc pastel */
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px #B3E5FC22;
+  font-size: 1.09rem;
+  margin-top: 10px;
+}
+
+.button-cv.synthese-btn {
+  margin-top: 18px;
+}
+
+
+/* VEILLE */
+
+.veille-col {
+  color: #fff;
+}
+
+.veille-texte-blur {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.4); /* couche blanche semi-transparente */
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.15);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+@media (max-width: 768px) {
+  .veille-texte-blur {
+    padding: 1rem;
+    font-size: 1.05em;
+  }
+}
+
+.degrade-top, .degrade-bottom {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 164px;           /* Longueur du dégradé (augmente/diminue pour plus ou moins de fondu) */
+  z-index: 100;
+  pointer-events: none;    /* Ne bloque pas les interactions */
+}
+
+.degrade-top {
+  background: linear-gradient(to bottom, #FFD7ED, #5d2a50);
+}
+
+.degrade-bottom {
+  background: linear-gradient(to top, #FFD7ED, #5d2a50);
+}
+

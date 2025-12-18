@@ -345,44 +345,71 @@
 </div>
 
   <!-- SECTION DOCUMENTATIONS -->
-<section>
-  <div class="container px-4 py-5" id="hanging-icons">
-    <h2 class="pb-2 border-bottom">Documentations</h2> 
-    <br>
-  <div class="carousel" mask>
-    <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-      <img src="proxmox.webp" alt="">
-      <h2 style="text-align: center;">Installation du service Proxmox sur un serveur</h2>
-    </article>
+  <section>
+    <div class="container px-4 py-5" id="hanging-icons">
+      <h2 class="pb-2 border-bottom">Documentations</h2>
+      <br>
+      
+      <!-- Conteneur principal avec position relative pour placer les boutons -->
+      <div class="carousel-wrapper">
+        
+        <!-- Bouton Gauche -->
+        <button id="prev-btn" class="nav-btn prev" aria-label="Précédent">&lt;</button>
   
-    <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-      <img src="adwindows.png" alt="easter eggs">
-      <h2 style="text-align: center;">Installation du service AD DS sur Windows Server</h2>
-    </article>
+        <!-- La zone de défilement (Track) -->
+        <div class="carousel-track" id="track">
+          
+          <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
+            <img src="proxmox.webp" alt="">
+            <div class="content">
+              <h2>Installation du service Proxmox sur un serveur</h2>
+            </div>
+          </article>
   
-    <article onclick="window.open('docproxmoxvm.pdf', '_blank')">
-      <img src="vmlogo.png" alt="hot cross buns">
-      <h2 style="text-align: center;">Déploiement de machines virtuelles sur Proxmox</h2>
-    </article>
+          <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
+            <img src="adwindows.png" alt="easter eggs">
+            <div class="content">
+              <h2>Installation du service AD DS sur Windows Server</h2>
+            </div>
+          </article>
   
-    <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-      <img src="gpo.png" alt="easter chick">
-      <h2 style="text-align: center;">Mise en place de stratégies de groupe (GPO) sur Windows Server</h2>
-    </article>
+          <article onclick="window.open('docproxmoxvm.pdf', '_blank')">
+            <img src="vmlogo.png" alt="hot cross buns">
+            <div class="content">
+              <h2>Déploiement de machines virtuelles sur Proxmox</h2>
+            </div>
+          </article>
   
-    <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-      <img src="wordpresslogo.png" alt="easter bunny">
-      <h2 style="text-align: center;">Déploiement sécurisé de Wordpress avec Nginx et MySQL</h2>
-    </article>
+          <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
+            <img src="gpo.png" alt="easter chick">
+            <div class="content">
+              <h2>Mise en place de stratégies de groupe (GPO)</h2>
+            </div>
+          </article>
   
-    <article onclick="window.open('docdhcpwinserver.pdf', '_blank')">
-      <img src="arpspoofing.webp" alt="crown of thorms">
-      <h2 style="text-align: center;">Mise en oeuvre du service DHCP sur Windows Server</h2>
-    </article>
+          <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
+            <img src="wordpresslogo.png" alt="easter bunny">
+            <div class="content">
+               <h2>Déploiement sécurisé de Wordpress</h2>
+            </div>
+          </article>
   
-  </div>
-  </div>
-</section>
+          <article onclick="window.open('docdhcpwinserver.pdf', '_blank')">
+            <img src="arpspoofing.webp" alt="crown of thorms">
+            <div class="content">
+              <h2>Mise en oeuvre du service DHCP sur Windows Server</h2>
+            </div>
+          </article>
+  
+        </div>
+  
+        <!-- Bouton Droite -->
+        <button id="next-btn" class="nav-btn next" aria-label="Suivant">&gt;</button>
+        
+      </div>
+    </div>
+  </section>
+  
 
  <!-- SECTION EPREUVES -->
 <section id="epreuves">
@@ -621,6 +648,32 @@
     backSpeed: 80,    // vitesse d'effacement
     loop: true        // effet en boucle
   });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("track");
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
+
+  // On récupère la largeur d'une carte + le gap dynamiquement
+  // (Cela permet de changer le CSS sans casser le JS)
+  const getScrollAmount = () => {
+    const card = track.querySelector("article");
+    if (!card) return 300; // Valeur par défaut
+    const style = window.getComputedStyle(track);
+    const gap = parseInt(style.gap) || 32; // 2rem approx 32px
+    return card.offsetWidth + gap;
+  };
+
+  nextBtn.addEventListener("click", () => {
+    track.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
+  });
+
+  prevBtn.addEventListener("click", () => {
+    track.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
+  });
+});
+
 </script>
 
 <!-- MODAL ALTERNANCE -->

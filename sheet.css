@@ -1,4 +1,10 @@
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
     font-family: '';
     src: url('') format('truetype'); 
@@ -391,152 +397,111 @@
   filter: brightness(0.7);
 }
 
-@layer base, demo;
-@import url(https://fonts.bunny.net/css?family=abel:400);
+/* CARROUSEL */
 
 @layer demo {
-	.carousel {
-		--items: 6;
-		--carousel-duration: 40s;
-		@media (width > 600px) {
-			--carousel-duration: 30s;
-		}
-		--carousel-width: min(
-			80vw,
-			1200px
-		); /* note - it will "break" if it gets too wide and there aren't enough items */
-		--carousel-item-width: 280px;
-		--carousel-item-height: 450px;
-		--carousel-item-gap: 2rem;
+  /* Variables pour la taille */
+  :root {
+    --card-width: 280px;
+    --card-gap: 2rem;
+    --card-height: 400px; /* Ajusté pour cohérence */
+  }
 
-		--clr-cta: rgb(0, 132, 209);
+  /* Wrapper pour positionner les boutons au-dessus */
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-		position: relative;
-		width: var(--carousel-width);
-		height: var(--carousel-item-height);
-		overflow: clip;
+  /* La zone qui défile */
+  .carousel-track {
+    display: flex;
+    gap: var(--card-gap);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Force l'arrêt sur une carte */
+    scroll-behavior: smooth; /* Défilement fluide */
+    padding-bottom: 20px; /* Espace pour la scrollbar si visible */
+    
+    /* Masquer la scrollbar (optionnel) */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+  }
 
-		&[mask] {
-			/* fade out on sides */
-			mask-image: linear-gradient(
-				to right,
-				transparent,
-				black 10% 90%,
-				transparent
-			);
-		}
+  /* Les cartes (Article) */
+  .carousel-track > article {
+    flex: 0 0 var(--card-width); /* Ne pas rétrécir les cartes */
+    scroll-snap-align: center;   /* La carte s'arrête au centre */
+    
+    height: var(--card-height);
+    display: flex;
+    flex-direction: column;
+    
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background: #C8B6FF;
+    color: white;
+    font-size: 10 px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
 
-		&[reverse] > article {
-			animation-direction: reverse;
-		}
-		/* hover pauses animation */
-		&:hover > article {
-			animation-play-state: paused;
-		}
-	}
-	.carousel > article {
-		position: absolute;
-		top: 0;
-		left: calc(100% + var(--carousel-item-gap));
-		width: var(--carousel-item-width);
-		height: var(--carousel-item-height);
-		display: grid;
-		grid-template-rows: 200px auto 1fr auto;
-		gap: 0.25rem;
-		border: 1px solid light-dark(rgba(0 0 0 / 0.25), rgba(255 255 255 / 0.15));
+  .carousel-track > article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
 
-		padding-block-end: 1rem;
-		border-radius: 10px;
-		background: light-dark(white, rgba(255 255 255 / 0.05));
-		color: light-dark(rgb(49, 65, 88), white);
+  .carousel-track img {
+    width: 100%;
+    height: 60%; /* Hauteur fixe pour l'image */
+    object-fit: cover;
+  }
 
-		/* animation */
-		will-change: transform;
-		animation-name: marquee;
-		animation-duration: var(--carousel-duration);
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
-		animation-delay: calc(
-			var(--carousel-duration) / var(--items) * 1 * var(--i) * -1
-		);
-		&:nth-child(1) {
-			--i: 0;
-		}
-		&:nth-child(2) {
-			--i: 1;
-		}
-		&:nth-child(3) {
-			--i: 2;
-		}
-		&:nth-child(4) {
-			--i: 3;
-		}
-		&:nth-child(5) {
-			--i: 4;
-		}
-		&:nth-child(6) {
-			--i: 5;
-		}
-		&:nth-child(7) {
-			--i: 6;
-		}
-		&:nth-child(8) {
-			--i: 7;
-		}
-	}
-	.carousel img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+  .carousel-track h2 {
+    font-size: 0.5rem;
+    text-align: center;
+    padding: 1rem;
+    font-weight: 400;
+    margin: 0;
+  }
 
-		border-radius: 10px 10px 0 0;
-	}
-	.carousel > article > *:not(img) {
-		padding: 0 1rem;
-	}
-	.carousel > article > div {
-		grid-row: span 2;
-		display: grid;
-		grid-template-rows: subgrid;
-		font-size: 0.8rem;
-	}
-	.carousel > article h2 {
-		font-size: 1.2rem;
-		font-weight: 300;
-		padding-block: 0.75rem 0.25rem;
-		margin: 0;
-	}
-	.carousel > article p {
-		margin: 0;
-	}
-	.carousel > article a {
-		text-decoration: none;
-		text-transform: lowercase;
-		border: 1px solid var(--clr-cta);
-		color: light-dark(var(--clr-cta), white);
-		border-radius: 3px;
-		padding: 0.25rem 0.5rem;
-		place-self: start;
-		transition: 150ms ease-in-out;
-		&:hover,
-		&:focus-visible {
-			background-color: var(--clr-cta);
-			color: white;
-			outline: none;
-		}
-	}
+  /* Styles des Boutons */
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
 
-	@keyframes marquee {
-		100% {
-			transform: translateX(
-				calc(
-					(var(--items) * (var(--carousel-item-width) + var(--carousel-item-gap))) *
-						-1
-				)
-			);
-		}
-	}
+  .nav-btn:hover {
+    background-color: rgb(0, 132, 209); /* Votre couleur bleue */
+    color: white;
+    border-color: rgb(0, 132, 209);
+  }
+
+  .nav-btn.prev { left: -20px; }
+  .nav-btn.next { right: -20px; }
+
+  /* Masquage responsive des boutons si besoin */
+  @media (max-width: 600px) {
+    .nav-btn { display: none; } /* Sur mobile, on swipe au doigt */
+  }
 }
+
 
 /* general styling */
 @layer base {

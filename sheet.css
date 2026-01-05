@@ -1,11 +1,15 @@
 
-
 @font-face {
-    font-family: '';
-    src: url('') format('truetype'); 
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: 'tanjiro';  /* Tanjiro */
+  src: url('fonts/tanjiro.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.tanjiro {
+  font-family: 'tanjiro', sans-serif; 
+}
   
 .bg-pastel-rose {
     background-color: #FFD7ED !important;
@@ -91,7 +95,7 @@
     .resume.section {
     background-color: #FFD7ED ;
     border-radius: 2.5rem;
-    box-shadow: 0 8px 40px -12px #AF7EFF44;
+    box-shadow: 0 8px 40px -12px #AF7EFF;
     padding: 48px 24px;
   }
   
@@ -392,110 +396,257 @@
   filter: brightness(0.7);
 }
 
-/* CARROUSEL */
+/* =========================================
+   CARROUSEL (Style Neon Rotating Border)
+   ========================================= */
 
-@layer demo {
-  /* Variables pour la taille */
-  :root {
-    --card-width: 280px;
-    --card-gap: 2rem;
-    --card-height: 400px; /* Ajusté pour cohérence */
-  }
-
-  /* Wrapper pour positionner les boutons au-dessus */
-  .carousel-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  /* La zone qui défile */
-  .carousel-track {
-    display: flex;
-    gap: var(--card-gap);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory; /* Force l'arrêt sur une carte */
-    scroll-behavior: smooth; /* Défilement fluide */
-    padding-bottom: 20px; /* Espace pour la scrollbar si visible */
-    
-    /* Masquer la scrollbar (optionnel) */
-    scrollbar-width: none; /* Firefox */
-    &::-webkit-scrollbar { display: none; } /* Chrome/Safari */
-  }
-
-  /* Les cartes (Article) */
-  .carousel-track > article {
-    flex: 0 0 var(--card-width); /* Ne pas rétrécir les cartes */
-    scroll-snap-align: center;   /* La carte s'arrête au centre */
-    
-    height: var(--card-height);
-    display: flex;
-    flex-direction: column;
-    
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    background: #C8B6FF;
-    color: white;
-    font-size: 10 px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-
-  .carousel-track > article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
-
-  .carousel-track img {
-    width: 100%;
-    height: 60%; /* Hauteur fixe pour l'image */
-    object-fit: cover;
-  }
-
-  .carousel-track h2 {
-    font-size: 0.5rem;
-    text-align: center;
-    padding: 1rem;
-    font-weight: 400;
-    margin: 0;
-  }
-
-  /* Styles des Boutons */
-  .nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-  }
-
-  .nav-btn:hover {
-    background-color: rgb(0, 132, 209); /* Votre couleur bleue */
-    color: white;
-    border-color: rgb(0, 132, 209);
-  }
-
-  .nav-btn.prev { left: -20px; }
-  .nav-btn.next { right: -20px; }
-
-  /* Masquage responsive des boutons si besoin */
-  @media (max-width: 600px) {
-    .nav-btn { display: none; } /* Sur mobile, on swipe au doigt */
-  }
+/* Variables locales pour faciliter les réglages */
+:root {
+  --card-width: 260px;       /* Largeur de la carte */
+  --card-height: 340px;      /* Hauteur de la carte */
+  --card-gap: 2rem;
+  --neon-bg: #07182E;        /* Fond sombre de la carte */
 }
+
+/* Wrapper pour positionner les boutons au-dessus */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* La zone qui défile (Track) */
+.carousel-track {
+  display: flex;
+  gap: var(--card-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Force l'arrêt sur une carte */
+  scroll-behavior: smooth;       /* Défilement fluide */
+  padding: 20px 10px;            /* Padding pour ne pas couper les ombres */
+  
+  /* Masquer la scrollbar */
+  scrollbar-width: none;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+
+
+/* --- STYLE DE LA CARTE (Article) --- */
+.carousel-track > article {
+  /* Dimensions fixes */
+  flex: 0 0 var(--card-width);
+  height: var(--card-height);
+  
+  /* Style de base "Neon Card" */
+  background: var(--neon-bg);
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  
+  /* Comportement */
+  cursor: pointer;
+  scroll-snap-align: center;
+  transition: transform 0.2s;
+  
+  /* On retire les bordures/styles de l'ancien design */
+  border: none;
+  box-shadow: none;
+  color: white; /* Texte blanc sur fond sombre */
+}
+
+/* Effet Hover (Zoom) */
+.carousel-track > article:hover {
+  transform: translateY(-5px);
+}
+
+
+/* --- LE CONTENU INTERNE (Image + Texte) --- */
+/* On cible le contenu direct (img, div, h4) via une div wrapper si possible,
+   ou directement si tu as gardé ta structure.
+   L'important : Z-INDEX > 1 pour passer au-dessus du pseudo-élément */
+
+.carousel-track > article .content {
+  /* Si tu as entouré ton contenu d'une div class="content" comme suggéré */
+  z-index: 5;
+  position: absolute;
+  inset: 5px; /* Pour rester dans le cadre noir intérieur */
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden; /* Pour que l'image ne dépasse pas */
+  background: var(--neon-bg); /* Fond sombre interne */
+}
+
+/* Si tu n'as PAS de div wrapper et juste <img> et <h4> directement dans <article> */
+/* Adapte ton HTML pour avoir <div class="content"> autour, c'est plus simple. */
+
+.carousel-track img {
+  width: 100%;
+  height: 65%; /* Hauteur de l'image */
+  object-fit: cover;
+  display: block;
+  z-index: 6;
+}
+
+.carousel-track h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+  font-weight: 700;
+  color: #fff;
+  z-index: 6;
+  
+  /* Centrer verticalement le texte restant */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+
+/* --- L'ANIMATION NEON (Le "Rayon" qui tourne) --- */
+.carousel-track > article::before {
+  content: '';
+  position: absolute;
+  width: 150px;             /* Largeur du rayon */
+  height: 140%;             /* Hauteur > 100% pour couvrir en tournant */
+  
+  /* Couleurs du néon (Bleu ciel -> Rose) adaptées à ton thème */
+  background-image: linear-gradient(180deg, #54A3FF, #FFB6E6);
+  
+  animation: rotBGimg 12s linear infinite; 
+  transition: all 0.2s linear;
+  z-index: 0; /* Tout au fond */
+}
+
+@keyframes rotBGimg {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* --- LE MASQUE INTERNE (Le fond noir) --- */
+.carousel-track > article::after {
+  content: '';
+  position: absolute;
+  background: var(--neon-bg);
+  inset: 5px;          /* Épaisseur du bord néon (5px) */
+  border-radius: 15px; /* Arrondi interne */
+  z-index: 1;          /* Au-dessus du rayon ::before */
+}
+
+/* Changement de couleur au survol (Optionnel) */
+.carousel-track > article:hover::before {
+  background-image: linear-gradient(180deg, #AF7EFF, #FFB6E6);
+  animation-duration: 2s; /* Accélère */
+}
+
+
+/* --- BOUTONS NAVIGATION STYLE UIVERSE --- */
+
+/* Conteneur du bouton (Positionnement) */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  cursor: pointer;
+  /* On retire les styles de l'ancien bouton rond */
+  background: none; border: none; box-shadow: none; width: auto; height: auto;
+}
+
+.nav-btn.prev { left: -60px; } /* Ajuste selon l'espace dispo */
+.nav-btn.next { right: -60px; }
+
+
+
+/* --- LE STYLE DU BOUTON UIVERSE --- */
+.styled-wrapper .button {
+  display: block;
+  position: relative;
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.styled-wrapper .button:before,
+.styled-wrapper .button:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 7px;
+}
+
+/* Cercle bordure animé */
+.styled-wrapper .button:before {
+  border: 4px solid #f0f0f0; /* Couleur cercle inactif */
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 80ms;
+}
+
+/* Cercle plein au survol */
+.styled-wrapper .button:after {
+  border: 4px solid #96e4ff; /* Couleur cercle actif (Bleu clair) */
+  transform: scale(1.3);
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 80ms;
+  opacity: 0;
+}
+
+.styled-wrapper .button:hover:before,
+.styled-wrapper .button:focus:before {
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.styled-wrapper .button:hover:after,
+.styled-wrapper .button:focus:after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.styled-wrapper .button-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.styled-wrapper .button-elem {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 17px 18px 0 18px;
+  transform: rotate(180deg);
+  fill: #f0f0f0; /* Couleur flèche inactive */
+}
+
+.styled-wrapper .button:hover .button-box,
+.styled-wrapper .button:focus .button-box {
+  transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1) 0ms;
+  transform: translateX(100%);
+}
+
+.styled-wrapper .button:hover .button-elem,
+.styled-wrapper .button:focus .button-elem {
+  fill: #96e4ff; /* Couleur flèche active */
+}
+
+/* Masquer sur mobile */
+@media (max-width: 850px) {
+  .nav-btn { display: none; }
+}
+
 
 
 /* general styling */
@@ -579,6 +730,18 @@
   margin-top: 18px;
 }
 
+.fondrose {
+  /* From Uiverse.io by uiverse-astronaut */ 
+  width: 100%;
+  height: 100%;
+  --color: #faa7d8;
+  background: linear-gradient(45deg, var(--color) 25%, transparent 25%) -50px 0,
+        linear-gradient(-45deg, var(--color) 25%, transparent 25%) -50px 0,
+        linear-gradient(45deg, transparent 75%, var(--color) 75%) -50px 0,
+        linear-gradient(-45deg, transparent 75%, var(--color) 75%) -50px 0;
+  background-color: #e5e5f7;
+  background-size: 10px 40px;
+}
 
 /* VEILLE */
 
@@ -626,4 +789,691 @@
 .section-alternance {
   background-color: #fee5f3;
   
+}
+
+/* MODAL */ 
+
+/* Import de la police Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&display=swap');
+
+/* --- Style Global de la Modale (Le cadre rose) --- */
+#infoModal .modal-content {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ff66a3; /* Le fond rose */
+  border: 3px solid #000000; /* La bordure épaisse */
+  box-shadow: 12px 12px 0 #000000; /* L'ombre dure décalée */
+  border-radius: 0; /* On retire les arrondis Bootstrap pour le style brut */
+  overflow: hidden;
+}
+
+/* --- L'en-tête (La barre blanche "Window") --- */
+#infoModal .modal-header {
+  background-color: #ffffff;
+  border-bottom: 3px solid #000000;
+  padding: 10px 20px;
+  border-radius: 0;
+}
+
+#infoModal .modal-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #000000;
+}
+
+/* Le bouton X de fermeture */
+#infoModal .btn-close {
+  opacity: 1;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0 #000000;
+  border-radius: 0;
+  transition: all 0.2s;
+}
+#infoModal .btn-close:active {
+  box-shadow: 0 0 0 #000000;
+  transform: translate(2px, 2px);
+}
+
+/* --- Le Corps (Le contenu texte) --- */
+#infoModal .modal-body {
+  /* Pour garder le texte lisible sur le rose, on peut laisser transparent 
+     ou mettre blanc. Ici je garde le style de l'exemple (fond du parent) */
+  color: #000000;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* --- Le Pied de page et le Bouton --- */
+#infoModal .modal-footer {
+  border-top: none; /* Pas de séparation visible entre body et footer */
+  padding-bottom: 20px;
+  justify-content: center; /* Centre le bouton */
+}
+
+/* Style du bouton "Fermer" pour ressembler au bouton vert de l'exemple */
+#infoModal .modal-footer .btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 750;
+  text-transform: uppercase;
+  color: #000000;
+  background: #4ade80; /* Vert */
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+  border-radius: 0; /* Retire le style "rounded-pill" */
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+#infoModal .modal-footer .btn:hover {
+  background: #1ac2ff; /* Bleu au survol */
+  box-shadow: 1.5px 1.5px 0 #000000;
+  transform: translate(1.5px, 1.5px);
+}
+
+#infoModal .modal-footer .btn:active {
+  box-shadow: 0 0 0 #000000;
+  transform: translate(3px, 3px);
+}
+
+
+/* CARD DESIGN */
+
+/* ====== CARTE FORMATION (version pastel) ======
+   Basée sur un design de cartes Uiverse (neo-brutalism) [web:41]
+*/
+
+/* Option : si tu utilises une font locale, remplis ton @font-face (sinon supprime-le) */
+/*
+@font-face {
+  font-family: 'MaPolice';
+  src: url('MaPolice.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+.edu-card {
+  /* Palette alignée avec TON CSS */
+  --primary: #AF7EFF;            /* violet pastel (tes .text-pastel-violet) */
+  --primary-hover: #C8B6FF;      /* violet clair */
+  --secondary: #54A3FF;          /* bleu doux (proche de tes titres) */
+  --secondary-hover: #0900f4;    /* bleu tech (tes .text-pastel-bleu) */
+  --accent: #FFB6E6;             /* rose néon (tes .bg-pastel-neon) */
+
+  --text: #0900f4;               /* texte “tech” */
+  --bg: #fee5f3;                 /* rose très clair (tes .bg-pastel-light-rose) */
+  --shadow-color: #000000;       /* ombre brutale */
+  --pattern-color: #C8B6FF;      /* points/grille violet clair */
+
+  position: relative;
+  margin-bottom: 1rem;
+  background: var(--bg);
+  border: 0.35em solid #000;
+  border-radius: 0.9em;
+  box-shadow:
+    0.7em 0.7em 0 var(--shadow-color),
+    inset 0 0 0 0.15em rgba(0, 0, 0, 0.05);
+  transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+
+  /* Mets ta police globale ici si tu veux */
+  font-family: "Montserrat", "Jost", "Nunito", system-ui, sans-serif;
+  transform-origin: center;
+}
+
+.edu-card:hover {
+  transform: translate(-0.35em, -0.35em) scale(1.02);
+  box-shadow: 1em 1em 0 var(--shadow-color);
+}
+
+.edu-card:hover .card-pattern-grid,
+.edu-card:hover .card-overlay-dots {
+  opacity: 1;
+}
+
+.edu-card:active {
+  transform: translate(0.1em, 0.1em) scale(0.99);
+  box-shadow: 0.5em 0.5em 0 var(--shadow-color);
+}
+
+.edu-card::before {
+  content: "";
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  width: 4em;
+  height: 4em;
+  background: var(--accent);
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.edu-card::after {
+  content: "★";
+  position: absolute;
+  top: 0.4em;
+  right: 0.4em;
+  color: #000;
+  font-size: 1.2em;
+  font-weight: 900;
+  z-index: 2;
+}
+
+/* Motifs */
+.edu-card .card-pattern-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 0.55em 0.55em;
+  pointer-events: none;
+  opacity: 0.45;
+  transition: opacity 0.35s ease;
+  z-index: 1;
+}
+
+.edu-card .card-overlay-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--pattern-color) 1px, transparent 1px);
+  background-size: 1em 1em;
+  background-position: -0.5em -0.5em;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 1;
+}
+
+.edu-card .bold-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6em;
+  height: 6em;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Header */
+.edu-card .card-title-area {
+  position: relative;
+  padding: 1.2em 1.2em;
+  background: linear-gradient(90deg, var(--primary), var(--primary-hover));
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.05em;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 0.35em solid #000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.edu-card .card-title-area::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.10),
+    rgba(0, 0, 0, 0.10) 0.5em,
+    transparent 0.5em,
+    transparent 1em
+  );
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+.edu-card .card-tag {
+  background: #fff;
+  color: #000;
+  font-size: 0.62em;
+  font-weight: 900;
+  padding: 0.4em 0.75em;
+  border: 0.15em solid #000;
+  border-radius: 0.45em;
+  box-shadow: 0.2em 0.2em 0 #000;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transform: rotate(3deg);
+  transition: all 0.25s ease;
+}
+
+.edu-card:hover .card-tag {
+  transform: rotate(-2deg) scale(1.06);
+  box-shadow: 0.25em 0.25em 0 #000;
+}
+
+/* Body */
+.edu-card .card-body {
+  position: relative;
+  padding: 1.3em;
+  z-index: 2;
+}
+
+.edu-card .card-description {
+  margin-bottom: 1.2em;
+  color: #000;
+  font-size: 0.95em;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+/* Grille */
+.edu-card .feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9em;
+  margin-bottom: 1.2em;
+}
+
+.edu-card .feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  transition: transform 0.2s ease;
+}
+
+.edu-card .feature-item:hover {
+  transform: translateX(0.25em);
+}
+
+.edu-card .feature-icon {
+  width: 1.45em;
+  height: 1.45em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--secondary);
+  border: 0.12em solid #000;
+  border-radius: 0.35em;
+  box-shadow: 0.2em 0.2em 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+}
+
+.edu-card .feature-item:hover .feature-icon {
+  background: var(--secondary-hover);
+  transform: rotate(-6deg);
+}
+
+.edu-card .feature-icon svg {
+  width: 0.9em;
+  height: 0.9em;
+  fill: #fff;
+}
+
+.edu-card .feature-text {
+  font-size: 0.86em;
+  font-weight: 800;
+  color: #000;
+}
+
+/* Bas */
+.edu-card .card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 1.2em;
+  padding-top: 1em;
+  border-top: 0.15em dashed rgba(0, 0, 0, 0.18);
+  position: relative;
+}
+
+.edu-card .card-actions::before {
+  content: "✂";
+  position: absolute;
+  top: -0.8em;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  background: var(--bg);
+  padding: 0 0.5em;
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.edu-card .price {
+  position: relative;
+  font-size: 1.55em;
+  font-weight: 900;
+  color: #000;
+  background: var(--bg);
+}
+
+.edu-card .price::before {
+  content: "";
+  position: absolute;
+  bottom: 0.15em;
+  left: 0;
+  width: 100%;
+  height: 0.22em;
+  background: var(--accent);
+  z-index: -1;
+  opacity: 0.65;
+}
+
+.edu-card .price-currency {
+  font-size: 0.65em;
+  font-weight: 900;
+  vertical-align: top;
+  margin-right: 0.1em;
+}
+
+.edu-card .price-period {
+  display: block;
+  font-size: 0.42em;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.65);
+  margin-top: 0.2em;
+}
+
+.edu-card .card-button {
+  position: relative;
+  background: linear-gradient(45deg, var(--secondary), var(--accent));
+  color: #000;
+  font-size: 0.9em;
+  font-weight: 900;
+  padding: 0.7em 1.15em;
+
+  border: 0.2em solid #000;
+  border-radius: 0.5em;
+  box-shadow: 0.3em 0.3em 0 #000;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.edu-card .card-button:hover {
+  transform: translate(-0.1em, -0.1em);
+  box-shadow: 0.4em 0.4em 0 #000;
+}
+
+.edu-card .card-button:active {
+  transform: translate(0.1em, 0.1em);
+  box-shadow: 0.15em 0.15em 0 #000;
+}
+
+/* Décos */
+.edu-card .dots-pattern {
+  position: absolute;
+  bottom: 2em;
+  left: -2em;
+  width: 8em;
+  height: 4em;
+  opacity: 0.25;
+  transform: rotate(-10deg);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.edu-card .accent-shape {
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  background: var(--primary-hover);
+  border: 0.15em solid #000;
+  border-radius: 0.35em;
+  transform: rotate(45deg);
+  bottom: -1.2em;
+  right: 2em;
+  z-index: 0;
+  transition: transform 0.25s ease;
+}
+
+.edu-card:hover .accent-shape {
+  transform: rotate(55deg) scale(1.06);
+}
+
+.edu-card .stamp {
+  position: absolute;
+  bottom: 1.5em;
+  left: 1.5em;
+  width: 4em;
+  height: 4em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0.15em solid rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
+  transform: rotate(-15deg);
+  opacity: 0.18;
+  z-index: 1;
+}
+
+.edu-card .stamp-text {
+  font-size: 0.6em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+
+.edu-card .corner-slice {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1.5em;
+  height: 1.5em;
+  background: var(--bg);
+  border-right: 0.25em solid #000;
+  border-top: 0.25em solid #000;
+  border-radius: 0 0.6em 0 0;
+  z-index: 1;
+}
+
+/* --- CONFIGURATION DU CAROUSEL --- */
+.neo-carousel-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 20px; /* Espace pour les ombres portées */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Pour un scroll fluide sur mobile */
+}
+
+/* Style de la barre de défilement */
+.neo-carousel-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.neo-carousel-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+.neo-carousel-wrapper::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 4px;
+}
+
+/* --- STYLE DES CARTES (Style Néo-Brutaliste) --- */
+.neo-card {
+  flex: 0 0 320px; /* Largeur fixe des cartes */
+  display: flex;
+  flex-direction: column;
+  
+  font-family: 'Montserrat', sans-serif;
+  scroll-snap-align: center;
+  
+  background: #ff66a3; /* Couleur de base */
+  border: 3px solid #000000;
+  box-shadow: 12px 12px 0 #000000;
+  transition: all 0.3s ease;
+  
+  height: auto; 
+  min-height: 320px; /* Hauteur minimale uniforme */
+}
+
+/* Variantes de couleurs */
+.neo-card.bg-rose { background: #ff66a3; }
+.neo-card.bg-blue { background: #7cd3ff; }
+.neo-card.bg-yellow { background: #af7eff; }
+
+.neo-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 16px 16px 0 #000000;
+}
+
+.neo-head {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  width: 100%;
+  background: #ffffff;
+  padding: 10px 15px;
+  color: #000000;
+  border-bottom: 3px solid #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.neo-content {
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: rgba(255,255,255, 0.1);
+}
+
+/* --- BADGES --- */
+.neo-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.neo-badge {
+  background: #000;
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+/* --- BOUTONS --- */
+.neo-button {
+  width: 100%;
+  padding: 10px 10px;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0 #000000;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  background: #FFD7ED;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  color: #000;
+}
+
+.neo-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000000;
+  background: #1ac2ff;
+}
+
+.neo-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 #000000;
+}
+
+/* Ajustements typographiques */
+.neo-content strong {
+  font-weight: 800;
+}
+.neo-content i {
+  font-size: 1.1em;
+}
+
+/* Adaptation Responsive du style "Window" Neobrutalist */
+.window-card {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;             /* Prend toute la largeur du container */
+  background: #ff66a3;     /* Rose vif de la carte */
+  border: 3px solid #000000;
+  box-shadow: 12px 12px 0 #000000; /* Ombre dure décalée */
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Effet de mouvement au survol de toute la barre */
+.window-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 15px 15px 0 #000000;
+}
+
+/* La barre de titre blanche */
+.window-head {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  background: #ffffff;
+  padding: 8px 15px;
+  color: #000000;
+  border-bottom: 3px solid #000000;
+  letter-spacing: 0.5px;
+}
+
+/* Le corps du texte */
+.window-content {
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Titres plus gras pour le style brut */
+.fw-black {
+  font-weight: 900;
+}
+
+/* Les boutons verts style "Retro" */
+.window-btn {
+  padding: 10px 20px;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0 #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  background: #4ade80; /* Vert flashy */
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+/* Interaction bouton */
+.window-btn:hover {
+  background: #1ac2ff; /* Bleu cyan au survol */
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000000;
+}
+
+.window-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 #000000;
+}
+
+/* Ajustement Mobile : réduire l'ombre si l'écran est petit */
+@media (max-width: 768px) {
+  .window-card {
+    box-shadow: 8px 8px 0 #000000;
+  }
+  .window-btn {
+    width: 100%; /* Boutons pleine largeur sur mobile */
+  }
 }

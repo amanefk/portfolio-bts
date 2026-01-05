@@ -25,18 +25,18 @@
 
   <nav class="navbar navbar-expand-lg fixed-top mt-8">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Portfolio</a>
+      <a class="navbar-brand tanjiro"" href="#">Portfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" style="filter: invert(100%);"></span>
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
         <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
-          <li class="nav-item"><a class="nav-link" href="#epreuves">Épreuves</a></li>
-          <li class="nav-item"><a class="nav-link" href="#veille">Veille</a></li>
+          <li class="nav-item tanjiro"><a class="nav-link" href="#">Accueil</a></li>
+          <li class="nav-item tanjiro""><a class="nav-link" href="#apropos">À propos</a></li>
+          <li class="nav-item tanjiro""><a class="nav-link" href="#projets">Projets</a></li>
+          <li class="nav-item tanjiro""><a class="nav-link" href="#epreuves">Épreuves</a></li>
+          <li class="nav-item tanjiro""><a class="nav-link" href="#veille">Veille</a></li>
         </ul>
       </div>
     </div>
@@ -58,12 +58,9 @@
             mon parcours académique et professionnel. Vous y trouverez 
             mon CV ainsi qu’une présentation des différents projets que 
             j’ai réalisés au cours de ma formation scolaire et professionnelle.</p>
-          <div class="hero-actions aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
-            <a href="" class="btn btn-primary mt-3 btn-lg neon-rose">Me contacter</a>
-          </div>
           <div class="social-links aos-init aos-animate mt-4 fs-3" data-aos="fade-up" data-aos-delay="600">
-            <a href="#"><i class="bi bi-linkedin me-3"></i></a>
-            <a href="#"><i class="bi bi-github"></i></a>
+            <a href="https://linkedin.com/in/amina-fakhir-92b7a3195" target="_blank"><i class="bi bi-linkedin me-3"></i></a>
+            <a href="https://github.com/amanefk" target="_blank"><i class="bi bi-github"></i></a>
           </div>
         </div>
       </div>
@@ -85,195 +82,505 @@
 
   <!-- Section Title -->
   <div class="container section-title aos-init aos-animate text-center mt-5" data-aos="fade-up">
-    <h2 class="text-pastel-bleu font-weight-bold highlight section-titre">QUI SUIS-JE ?</h2>
+    <h2 class=" tanjiro text-pastel-bleu font-weight-bold highlight ">A PROPOS</h2>
     <br>
-    <p>En reconversion professionnelle, je suis étudiante en BTS SIO SISR en alternance à la MACIF 
+    
+    <!-- AJOUT DE 'text-center' DIRECTEMENT ICI -->
+    <p class="text-center mx-auto" style="max-width: 800px;">
+      En reconversion professionnelle, je suis étudiante en BTS SIO SISR en alternance à la MACIF 
       en tant que chargée d’assistance utilisateurs, après un parcours en production audiovisuelle. 
       Passionnée d’informatique, j’accompagne les collaborateurs au quotidien et développe mes compétences 
       en systèmes et réseaux. 
-      </p>
+    </p>
     <br>
   </div><!-- End Section Title -->
 
+
   <div class="container aos-init aos-animate mt-5" data-aos="fade-up" data-aos-delay="100">
-    <div class="row">
-      <div class="col-lg-6">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-5">
 
         <!-- FORMATION SECTION -->
-        <div class="resume-item aos-init aos-animate" data-aos="fade-up">
-          <h3 class="resume-title">Formation</h3>
-          <div class="resume-content">
-            <article class="education-item">
-              <h4>BTS Services Informatiques aux Organisations, option SISR</h4>
-              <h5>2024 - 2026</h5>
-              <p class="institution"><em>IPSSI, Paris 12ème</em></p>
-              <p>Spécialisation en administration des systèmes et réseaux, sécurité informatique, support utilisateurs et gestion de parc.</p>
-            </article>
-            <br>
-            <article class="education-item">
-              <h4>BTS Métiers de l'Audiovisuel, option Gestion de Production</h4>
-              <h5>2019 - 2021</h5>
-              <p class="institution"><em>Institut Supérieur d’Audiovisuel, Paris 15ème</em></p>
-              <p>Gestion de projet, organisation des équipes, communication et coordination dans l’industrie audiovisuelle.</p>
-            </article>
+        <div class="edu-card">
+          <div class="card-pattern-grid"></div>
+          <div class="card-overlay-dots"></div>
+        
+          <div class="bold-pattern">
+            <svg viewBox="0 0 100 100">
+              <path stroke-dasharray="15 10" stroke-width="10" stroke="#000" fill="none"
+                d="M0,0 L100,0 L100,100 L0,100 Z"></path>
+            </svg>
+          </div>
+        
+          <div class="card-title-area">
+            <span>FORMATION</span>
+            <span class="card-tag">2024 - 2026</span>
+          </div>
+        
+          <div class="card-body">
+            <div class="card-description">
+              <strong>BTS SIO, option SISR - IPSSI Paris</strong><br />
+              Spécialisation en administration des systèmes et réseaux, sécurité informatique, support utilisateurs et gestion de parc.
+            </div>
+            <div class="card-description">
+              <strong>BTS Audiovisuel, option Gestion de Production - ISA Paris</strong><br />
+              Gestion de projet, administratif, coordination d’équipes et suivi de production audiovisuelle.
+            </div>
+          </div>
+        
+          <div class="dots-pattern">
+            <!-- même svg points -->
+          </div>
+        
+          <div class="accent-shape"></div>
+          <div class="corner-slice"></div>
+        
+          <div class="stamp">
+            <span class="stamp-text">Approved</span>
           </div>
         </div>
+        
         <!-- FIN FORMATION SECTION -->
 
-        <!-- BTS SECTION -->
-        <div class="resume-item skills-animation aos-init aos-animate" data-aos="fade-up">
-          <h3 class="resume-title">Le BTS SIO </h3>
-          <div class="resume-content">
-            <div class="skill-item">
-              <h4>Qu'est ce que le BTS SIO ?</h4>
-              <p>Le BTS SIO (Services Informatiques aux Organisations) forme des professionnels capables de concevoir, déployer et maintenir des solutions informatiques répondant aux besoins des entreprises. Il propose deux spécialisations : SLAM et SISR.</p>
+        <div class="edu-card">
+          <!-- Décorations de fond (identiques au CSS) -->
+          <div class="card-pattern-grid"></div>
+          <div class="card-overlay-dots"></div>
+          <div class="bold-pattern">
+            <svg viewBox="0 0 100 100">
+              <path stroke-dasharray="15 10" stroke-width="10" stroke="#000" fill="none" d="M0,0 L100,0 L100,100 L0,100 Z"></path>
+            </svg>
+          </div>
+        
+          <!-- En-tête -->
+          <div class="card-title-area">
+            <span> Le BTS SIO</span>
+            <span class="card-tag">Info</span>
+          </div>
+        
+          <div class="card-body">
+            <!-- Intro -->
+            <div class="card-description">
+              <strong>Services Informatiques aux Organisations</strong><br>
+              Formation d'experts en conception, déploiement et maintenance de solutions IT pour les entreprises.
             </div>
-            <div class="skill-item">
-              <h4>Spécialisation SLAM</h4>
-              <p>Axée sur le développement d’applications, cette option forme à la conception, la programmation et la maintenance de solutions logicielles. Les étudiants y apprennent le développement web, la gestion de bases de données et la programmation orientée objet.</p>
+        
+            <!-- Comparatif SLAM / SISR via la Grille -->
+            <div class="feature-grid">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <!-- Icone Code (SLAM) -->
+                  <svg viewBox="0 0 24 24"><path d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z"></path></svg>
+                </div>
+                <span class="feature-text">Option SLAM</span>
+              </div>
+        
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <!-- Icone Réseau (SISR) -->
+                  <svg viewBox="0 0 24 24"><path d="M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path></svg>
+                </div>
+                <span class="feature-text">Option SISR</span>
+              </div>
             </div>
-            <div class="skill-item">
-              <h4>Spécialisation SISR</h4>
-              <p>Orientée vers l’administration des systèmes et réseaux, cette spécialisation développe des compétences en installation, configuration et sécurisation d’infrastructures informatiques, ainsi qu’en virtualisation et gestion de serveurs.</p>
+        
+            <!-- Détails (Réutilisation de la classe description pour le style) -->
+            <div class="card-description">
+              <strong>SLAM :</strong> Dév. web, mobile, bases de données & programmation.<br>
+              <strong>SISR :</strong> Admin sys & réseaux, sécurité, virtualisation.
             </div>
-            <div class="skill-item">
-              <h4>Compétences communes</h4>
-              <p>Les deux parcours incluent la gestion de projet, l’étude des systèmes d’information et l’environnement professionnel. Les stages ou l’alternance permettent d’acquérir une expérience concrète en entreprise.</p>
+        
+            <div class="card-description">
+              <strong>+ Commun :</strong> Gestion de projet, juridique & management.<br>
+              <strong>+ Futur :</strong> Licence Pro, Master, École d'ingénieurs.
             </div>
-            <div class="skill-item">
-              <h4>Poursuites d’études et certifications</h4>
-              <p>Après le BTS SIO, plusieurs voies sont possibles : licences professionnelles, bachelors, écoles d’ingénieurs ou masters. Des certifications techniques (Cisco CCNA, Scrum, Java, Python) viennent renforcer les compétences acquises.</p>
+        
+            <!-- Bas de carte -->
+            <div class="card-actions">
+              <div class="price">
+                <span class="price-currency">+</span>BAC+2
+                <span class="price-period">Niveau 5</span>
+              </div>
+              <button class="card-button">Détails</button>
             </div>
           </div>
-        </div><!-- FIN BTS SECTION -->
+        
+          <!-- Décorations SVG bas -->
+          <div class="dots-pattern">
+            <svg viewBox="0 0 80 40">
+              <circle fill="#000" r="3" cy="10" cx="10"></circle>
+              <circle fill="#000" r="3" cy="10" cx="30"></circle>
+              <circle fill="#000" r="3" cy="10" cx="50"></circle>
+              <circle fill="#000" r="3" cy="10" cx="70"></circle>
+              <circle fill="#000" r="3" cy="20" cx="20"></circle>
+              <circle fill="#000" r="3" cy="20" cx="40"></circle>
+              <circle fill="#000" r="3" cy="20" cx="60"></circle>
+            </svg>
+          </div>
+          <div class="accent-shape"></div>
+          <div class="corner-slice"></div>
+          <div class="stamp">
+            <span class="stamp-text">TOP</span>
+          </div>
+        </div>
         
 
         <!-- ALTERNANCE SECTION -->
-        <div class="resume-item aos-init aos-animate" data-aos="fade-up">
-          <h3 class="resume-title">Alternance</h3>
-          <div class="resume-content">
-            <article class="education-item">
-              <h4>Alternance à la Macif</h4>
-              <h5>2024 - 2026</h5>
-              <p class="institution"><em>Paris 15ème</em></p>
-              <p>Forme juridique : Mutuelle d’assurance (SGAM Macif)<br>
-                Chiffre d’affaires : 6,95 milliards € (2024)<br>
-                Siège social : 2-4 rue Pied de Fond, 79000 Niort<br>
-                Domaine d’activité : Assurances dommages, <br> santé-prévoyance, finance-épargne<br>
-                Site internet : www.macif.fr</p>
-            </article>
-            <br>
-            <article class="education-item">
-              <div class="d-flex justify-content-center gap-2 mb-5">
-                <button type="button" class="button-cv" data-bs-toggle="modal" data-bs-target="#infoModal">
-                  <span>Mon rôle</span>
-                  <svg class="bi ms-2" width="24" height="24" aria-hidden="true">
-                    <use xlink:href="#arrow-right-short"></use>
-                  </svg>
-                </button>
-                <!-- Modal Bootstrap à la fin -->
-                <div class="dropdown">
-                  <button class="button-cv dropdown-toggle"
-                          type="button"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                    <span>Mes travaux</span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="FAKHIR AMINA CERFA.pdf" target="_blank">Fabrication de postes</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pdfs/travail2.pdf" target="_blank">Inventaire du matériel</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pdfs/travail3.pdf" target="_blank">Gestion des incidents et demandes</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-            
-          </div>
+<div class="edu-card wide">
+  
+  <!-- Décorations de fond -->
+  <div class="card-pattern-grid"></div>
+  <div class="card-overlay-dots"></div>
+  <div class="bold-pattern">
+    <svg viewBox="0 0 100 100">
+      <path stroke-dasharray="15 10" stroke-width="10" stroke="#000" fill="none" d="M0,0 L100,0 L100,100 L0,100 Z"></path>
+    </svg>
+  </div>
+
+  <!-- Header : Entreprise + Dates -->
+  <div class="card-title-area">
+    <span>ALTERNANCE</span>
+    <span class="card-tag">2024 - 2026</span>
+  </div>
+
+  <div class="card-body">
+    
+    <!-- Description Activité -->
+    <div class="card-description">
+      <strong>Mutuelle d’assurance.</strong><br>
+      Secteurs : Assurances dommages, santé-prévoyance & finance-épargne.
+    </div>
+
+    <!-- Chiffres clés (Grid) -->
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon bg-pastel-neon"> <!-- Utilise ta classe bg-pastel-neon -->
+          <!-- Icone Euro -->
+          <svg viewBox="0 0 24 24"><path d="M12.5,10H11.5V16.6L10.9,16L10.2,16.7L12,18.5L13.8,16.7L13.1,16L12.5,16.6V10M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V5H19V19M11,7H13V9H11V7Z"></path></svg>
         </div>
-        
-        <!-- FIN ALTERNANCE SECTION -->
+        <div>
+          <span class="feature-text d-block">6,95 Mds €</span>
+          <span class="feature-text fw-light opacity-75 small">Chiffre d'affaires</span>
+        </div>
       </div>
 
-      <div class="col-lg-6">
-        <!-- Experience Section -->
-        <div class="resume-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="resume-title">Expériences Professionnelles</h3>
-          <div class="resume-content">
-            <article class="experience-item">
-              <h4>Chargée d’Assistance Utilisateurs (Alternance)</h4>
-              <h5>MACIF, Paris – 2024 / 2026</h5>
-              <ul class="pastel-heart-list">
-                <li></i>Support technique et accompagnement utilisateurs au quotidien</li>
-                <li></i>Gestion des demandes, incidents et résolution de problèmes sur postes Windows</li>
-                <li>Administration Active Directory, création et gestion de comptes et groupes</li>
-                <li>Interventions sur le réseau, la sécurité et les sauvegardes</li>
-                <li>Formation et vulgarisation technique auprès de collaborateurs</li>
-              </ul>
-            </article>
-            <br>
-            <article class="experience-item">
-              <h4>Assistante de Production Audiovisuelle</h4>
-              <h5>Hifi-Génie Productions, Paris – 2022 / 2024</h5>
-              <ul class="pastel-heart-list">
-                <li>Gestion des sessions d’enregistrement et coordination des équipes de production</li>
-                <li>Suivi administratif et organisation d’événements professionnels</li>
-                <li>Animation des réseaux sociaux et communication digitale</li>
-              </ul>
-            </article>
-            <br>
-            <article class="experience-item">
-              <h4>Assistante de Production Audiovisuelle</h4>
-              <h5>Samka Animation, Paris – Jan-Nov 2022</h5>
-              <ul>
-                <li>Soutien à la production de séries d’animation</li>
-                <li>Utilisation de logiciels de storyboard et réalisation de dépouillements</li>
-                <li>Gestion administrative de l’emploi et des contrats de travail</li>
-              </ul>
-            </article>
-          </div>
-        </div><!-- End Experience Section -->
-
-        <div class="resume-item aos-init aos-animate" data-aos="fade-up">
-          <h3 class="resume-title">Débouchés du BTS SIO</h3>
-          <div class="resume-content">
-            <h4>Option SISR (Solutions d’Infrastructure, Systèmes et Réseaux)</h4>
-            <ul>
-              <li>Administrateur systèmes et réseaux</li>
-              <li>Informaticien support et déploiement</li>
-              <li>Support systèmes et réseaux</li>
-              <li>Technicien d’infrastructure</li>
-              <li>Technicien de production</li>
-            </ul>
-            <br>
-            <h4>Option SLAM (Solutions Logicielles et Applications Métiers)</h4>
-            <ul>
-              <li>Développeur d’applications informatiques</li>
-              <li>Développeur informatique</li>
-              <li>Analyste d’applications ou d’études</li>
-              <li>Analyste programmeur</li>
-              <li>Programmeur analyste</li>
-              <li>Programmeur d’applications</li>
-            </ul>
-            <br>
-            <h4> Ma poursuite d'études </h4>
-            <p>Après l'obtention de mon BTS SIO SISR, je prévois de poursuivre mes études en intégrant une école d'ingénieurs spécialisée en informatique, avec un focus sur les systèmes et réseaux.  
-              Mon objectif est de devenir ingénieure systèmes et réseaux, en jouant un rôle clé dans la conception, la mise en œuvre et la gestion des environnements informatiques complexes, tout en garantissant leur sécurité et leur performance au sein des entreprises.</p>
-
-          </div>
+      <div class="feature-item">
+        <div class="feature-icon bg-pastel-violet"> <!-- Utilise ta classe bg-pastel-violet -->
+          <!-- Icone Localisation -->
+          <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
         </div>
-        <br><br><br>
-        <div class="d-flex justify-content-center">
-          <!-- BOUTON CV --> 
-          <button class="button-cv">
-            <span>Découvrir mon CV</span>
-          </button>
+        <div>
+          <span class="feature-text d-block">Niort / Paris</span>
+          <span class="feature-text fw-light opacity-75 small">Siège Social</span>
         </div>
+      </div>
+    </div>
+
+    <!-- Zone d'actions (Tes boutons intégrés) -->
+    <div class="d-flex gap-3 mt-4 flex-wrap">
+      
+      <!-- Ton Bouton Modal "Mon Rôle" (Adapté avec class card-button) -->
+      <button type="button" class="card-button flex-grow-1" data-bs-toggle="modal" data-bs-target="#infoModal">
+        <span>Mon rôle</span>
+      </button>
+
+      <!-- Ton Dropdown "Mes travaux" -->
+      <div class="dropdown flex-grow-1">
+        <button class="card-button dropdown-toggle w-100 d-flex justify-content-between align-items-center"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+          <span>Mes travaux</span>
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="FAKHIR AMINA CERFA.pdf" target="_blank">Fabrication de postes</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="pdfs/travail2.pdf" target="_blank">Inventaire du matériel</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="pdfs/travail3.pdf" target="_blank">Gestion des incidents</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Footer : Site Web -->
+    <div class="card-actions">
+      <div class="price">
+        <span class="price-currency">@</span>Web
+        <span class="price-period">Officiel</span>
+      </div>
+      <a href="https://www.macif.fr" target="_blank" class="text-decoration-none">
+        <button class="card-button">macif.fr</button>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Décorations bas -->
+  <div class="dots-pattern">
+    <svg viewBox="0 0 80 40">
+      <circle fill="#000" r="3" cy="10" cx="10"></circle>
+      <circle fill="#000" r="3" cy="10" cx="30"></circle>
+      <circle fill="#000" r="3" cy="10" cx="50"></circle>
+      <circle fill="#000" r="3" cy="10" cx="70"></circle>
+      <circle fill="#000" r="3" cy="20" cx="20"></circle>
+      <circle fill="#000" r="3" cy="20" cx="40"></circle>
+      <circle fill="#000" r="3" cy="20" cx="60"></circle>
+    </svg>
+  </div>
+  <div class="accent-shape"></div>
+  <div class="corner-slice"></div>
+  <div class="stamp">
+    <span class="stamp-text">PRO</span>
+  </div>
+</div>
+<!-- FIN ALTERNANCE SECTION -->
+      </div>
+
+      <div class="col-lg-5">
+     <!-- EXPERIENCE SECTION -->
+<div class="edu-card wide">
+  
+  <!-- Décorations de fond -->
+  <div class="card-pattern-grid"></div>
+  <div class="card-overlay-dots"></div>
+  <div class="bold-pattern">
+    <svg viewBox="0 0 100 100">
+      <path stroke-dasharray="15 10" stroke-width="10" stroke="#000" fill="none" d="M0,0 L100,0 L100,100 L0,100 Z"></path>
+    </svg>
+  </div>
+
+  <!-- Header -->
+  <div class="card-title-area">
+    <span>Parcours Pro</span>
+    <span class="card-tag">Expérience</span>
+  </div>
+
+  <div class="card-body">
+
+    <!-- Résumé visuel (IT vs Gestion) -->
+    <div class="feature-grid mb-4">
+      <div class="feature-item">
+        <div class="feature-icon bg-pastel-bleu">
+          <!-- Icone Ordi/IT -->
+          <svg viewBox="0 0 24 24"><path d="M20,18C21.1,18 22,17.1 22,16V6C22,4.9 21.1,4 20,4H4C2.9,4 2,4.9 2,6V16C2,17.1 2.9,18 4,18H0V20H24V18H20M4,6H20V16H4V6Z"></path></svg>
+        </div>
+        <div>
+          <span class="feature-text d-block">IT & Support</span>
+          <span class="feature-text fw-light opacity-75 small">Depuis 2024</span>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon bg-pastel-rose">
+          <!-- Icone Gestion/Dossier -->
+          <svg viewBox="0 0 24 24"><path d="M20,6H12L10,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8A2,2 0 0,0 20,6Z"></path></svg>
+        </div>
+        <div>
+          <span class="feature-text d-block">Gestion & Prod.</span>
+          <span class="feature-text fw-light opacity-75 small">2019 - 2024</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LISTE DES EXPERIENCES -->
+    
+    <!-- 1. MACIF -->
+    <div class="mb-4 pb-3 border-bottom border-dark border-opacity-10">
+      <div class="d-flex justify-content-between align-items-start flex-wrap">
+        <div>
+          <strong style="font-size: 1.1em;">Chargée d’Assistance IT</strong>
+          <div class="small fw-bold opacity-75">MACIF • Paris • 2024 / 2026</div>
+        </div>
+        <span class="badge bg-pastel-neon text-dark border border-dark rounded-pill">Alternance</span>
+      </div>
+      <ul class="mt-2 ps-3 mb-0" style="font-size: 0.95em;">
+        <li>Support technique N1/N2 & accompagnement utilisateurs.</li>
+        <li>Résolution incidents Windows & Gestion de parc.</li>
+        <li>Admin Active Directory (Comptes, Droits, Groupes).</li>
+        <li>Maintenance réseau, sécurité et sauvegardes.</li>
+      </ul>
+    </div>
+
+    <!-- 2. Hifi-Génie -->
+    <div class="mb-4 pb-3 border-bottom border-dark border-opacity-10">
+      <div class="d-flex justify-content-between align-items-start flex-wrap">
+        <div>
+          <strong style="font-size: 1.1em;">Assistante Prod. Audiovisuelle</strong>
+          <div class="small fw-bold opacity-75">Hifi-Génie Prod. • Paris • 2022 / 2024</div>
+        </div>
+      </div>
+      <ul class="mt-2 ps-3 mb-0" style="font-size: 0.95em;">
+        <li>Coordination des équipes & Gestion sessions d'enregistrement.</li>
+        <li>Suivi administratif & Organisation événementielle.</li>
+        <li>Communication digitale & Réseaux sociaux.</li>
+      </ul>
+    </div>
+
+    <!-- 3. Samka -->
+    <div>
+      <div class="d-flex justify-content-between align-items-start flex-wrap">
+        <div>
+          <strong style="font-size: 1.1em;">Assistante de Production</strong>
+          <div class="small fw-bold opacity-75">Samka Animation • Paris • 2022</div>
+        </div>
+      </div>
+      <ul class="mt-2 ps-3 mb-0" style="font-size: 0.95em;">
+        <li>Soutien production séries d’animation & Storyboard.</li>
+        <li>Gestion administrative (Contrats, Emploi).</li>
+      </ul>
+    </div>
+
+    <!-- Footer : Bouton CV -->
+    <div class="card-actions">
+      <div class="price">
+        <span class="price-currency">@</span>CV
+        <span class="price-period">Format PDF</span>
+      </div>
+      <!-- Remplace 'mon_cv.pdf' par le vrai lien de ton CV -->
+      <a href="mon_cv.pdf" target="_blank" class="text-decoration-none">
+        <button class="card-button">Télécharger</button>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Décorations bas -->
+  <div class="dots-pattern">
+    <svg viewBox="0 0 80 40">
+      <circle fill="#000" r="3" cy="10" cx="10"></circle>
+      <circle fill="#000" r="3" cy="10" cx="30"></circle>
+      <circle fill="#000" r="3" cy="10" cx="50"></circle>
+      <circle fill="#000" r="3" cy="10" cx="70"></circle>
+      <circle fill="#000" r="3" cy="20" cx="20"></circle>
+      <circle fill="#000" r="3" cy="20" cx="40"></circle>
+      <circle fill="#000" r="3" cy="20" cx="60"></circle>
+    </svg>
+  </div>
+  <div class="accent-shape"></div>
+  <div class="corner-slice"></div>
+  <div class="stamp">
+    <span class="stamp-text">WORK</span>
+  </div>
+</div>
+
+
+        <!-- SECTION DEBOUCHES & AVENIR -->
+<div class="edu-card wide">
+  
+  <!-- Décorations de fond -->
+  <div class="card-pattern-grid"></div>
+  <div class="card-overlay-dots"></div>
+  <div class="bold-pattern">
+    <svg viewBox="0 0 100 100">
+      <path stroke-dasharray="15 10" stroke-width="10" stroke="#000" fill="none" d="M0,0 L100,0 L100,100 L0,100 Z"></path>
+    </svg>
+  </div>
+
+  <!-- Header -->
+  <div class="card-title-area">
+    <span>Carrière & Avenir</span>
+    <span class="card-tag">Futur</span>
+  </div>
+
+  <div class="card-body">
+
+    <!-- Partie 1 : Les Débouchés (SISR vs SLAM) -->
+    <!-- Utilisation de la grille Bootstrap (Row/Col) pour séparer les listes -->
+    <div class="row g-4">
+      
+      <!-- Colonne SISR -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <div class="feature-icon bg-pastel-violet">
+            <!-- Icone Réseau/Serveur -->
+            <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path></svg>
+          </div>
+          <strong class="text-uppercase" style="font-size: 0.9em;">Métiers SISR</strong>
+        </div>
+        <!-- Liste sans puces, avec tirets manuels pour le style -->
+        <ul class="list-unstyled small mb-0 fw-bold opacity-75">
+          <li class="mb-1">- Admin systèmes et réseaux</li>
+          <li class="mb-1">- Informaticien support & déploiement</li>
+          <li class="mb-1">- Technicien d’infrastructure</li>
+          <li class="mb-1">- Technicien de production</li>
+        </ul>
+      </div>
+
+      <!-- Colonne SLAM -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <div class="feature-icon bg-pastel-rose">
+            <!-- Icone Code/Dev -->
+            <svg viewBox="0 0 24 24"><path d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z"></path></svg>
+          </div>
+          <strong class="text-uppercase" style="font-size: 0.9em;">Métiers SLAM</strong>
+        </div>
+        <ul class="list-unstyled small mb-0 fw-bold opacity-75">
+          <li class="mb-1">- Développeur d’applications</li>
+          <li class="mb-1">- Analyste programmeur</li>
+          <li class="mb-1">- Analyste d’études</li>
+          <li class="mb-1">- Programmeur d’applications</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Séparateur visuel -->
+    <div class="my-4 border-top border-dark border-opacity-25 border-2 dashed"></div>
+
+    <!-- Partie 2 : Ma poursuite d'études -->
+    <div class="d-flex gap-3">
+      <!-- Icone Cible/Objectif -->
+      <div class="flex-shrink-0">
+         <div class="feature-icon bg-pastel-neon" style="width: 3em; height: 3em;">
+            <svg viewBox="0 0 24 24" style="width: 1.5em; height: 1.5em;"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"></path></svg>
+         </div>
+      </div>
+      
+      <div>
+        <h5 class="fw-black text-uppercase mb-2" style="font-size: 1em;">Mon Objectif : Ingénieure</h5>
+        <p class="small mb-0" style="line-height: 1.5;">
+          Intégrer une <strong>école d'ingénieurs</strong> spécialisée en informatique (Focus Systèmes & Réseaux).
+          <br><br>
+          <em>Ambition :</em> Devenir un pilier dans la conception et la sécurisation d'architectures complexes au sein des entreprises.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="card-actions">
+      <div class="price">
+        <span class="price-currency">@</span>BAC+5
+        <span class="price-period">Objectif</span>
+      </div>
+      <button class="card-button">Me contacter</button>
+    </div>
+
+  </div>
+
+  <!-- Décorations bas -->
+  <div class="dots-pattern">
+    <svg viewBox="0 0 80 40">
+      <circle fill="#000" r="3" cy="10" cx="10"></circle>
+      <circle fill="#000" r="3" cy="10" cx="30"></circle>
+      <circle fill="#000" r="3" cy="10" cx="50"></circle>
+      <circle fill="#000" r="3" cy="10" cx="70"></circle>
+      <circle fill="#000" r="3" cy="20" cx="20"></circle>
+      <circle fill="#000" r="3" cy="20" cx="40"></circle>
+      <circle fill="#000" r="3" cy="20" cx="60"></circle>
+    </svg>
+  </div>
+  <div class="accent-shape"></div>
+  <div class="corner-slice"></div>
+  <div class="stamp">
+    <span class="stamp-text">GOAL</span>
+  </div>
+</div>
       </div>
     </div>
   </div>
@@ -283,320 +590,257 @@
  <!-- SECTION PROJETS -->
 <section id="projets">
      <!-- Section Title -->
-  <div class="container section-title aos-init aos-animate text-center mt-5" data-aos="fade-up">
-    <h2 class="text-pastel-bleu font-weight-bold highlight section-titre">PROJETS</h2>
-    <br>
-    <p class="fs-5 mb-4">En tant qu’étudiante en BTS SIO, j’ai développé des compétences solides en gestion et sécurisation 
-      des réseaux et systèmes informatiques. Cette formation m’a permis d’apprendre à installer, configurer et maintenir 
-      tout type d’infrastructure, tout en assurant le support aux utilisateurs au quotidien. Grâce à ce parcours, 
-      j’acquiers une expertise technique recherchée dans le monde professionnel. 
-      </p>
-    <br> 
-  </div><!-- End Section Title -->
-  <div class="container px-4 py-5" id="custom-cards"> 
-    <h2 class="pb-2 border-bottom">Certifications</h2> 
-
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5"> 
-      <div class="col"> <div class="certif card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('rgpd.jpg') ;"> 
-        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"> 
-          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">RGPD</h3> 
-        </div> 
-      </div> 
-    </div> 
-    <div class="col"> 
-      <div class=" certif card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');"> 
-        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"> 
-          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">LINUX</h3> 
-        </div> 
-      </div> 
-    </div> 
-    <div class="col"> 
-      <div class="certif card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');"> 
-        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1"> 
-          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">AZURE</h3>
-        </div> 
-      </div> 
-    </div> 
-    
-  </div> 
-  <!-- Seconde rangée -->
-  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-    <div class="col"> <div class="certif card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');"> 
-      <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"> 
-        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Ajouter</h3> 
-      </div> 
-    </div> 
-  </div> 
-    
-  <div class="col"> <div class="certif card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');"> 
-    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"> 
-      <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Ajouter</h3> 
-    </div> 
-  </div> 
-</div> 
-    
-<div class="col"> <div class="certif card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');"> 
-  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"> 
-    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Ajouter</h3> 
-  </div> 
-</div> 
-</div> 
-  </div>
-</div>
+  <!-- Section Title PROJETS -->
+<div class="container section-title aos-init aos-animate text-center mt-5" data-aos="fade-up">
+  <h2 class="text-pastel-bleu font-weight-bold highlight tanjiro">PROJETS</h2>
+  <br>
+  
+  <!-- Ajout des classes de centrage et de la largeur max -->
+  <p class="fs-5 mb-4 text-center mx-auto" style="max-width: 800px;">
+    En tant qu’étudiante en BTS SIO, j’ai développé des compétences solides en gestion et sécurisation 
+    des réseaux et systèmes informatiques. Cette formation m’a permis d’apprendre à installer, configurer et maintenir 
+    tout type d’infrastructure, tout en assurant le support aux utilisateurs au quotidien. Grâce à ce parcours, 
+    j’acquiers une expertise technique recherchée dans le monde professionnel. 
+  </p>
+  <br> 
+</div><!-- End Section Title -->
+<!-- End Section Title -->
 
   <!-- SECTION DOCUMENTATIONS -->
   <section>
     <div class="container px-4 py-5" id="hanging-icons">
-      <h2 class="pb-2 border-bottom">Documentations</h2>
-      <br>
+      <h2 style ="text-align: center" class="pb-2 border-bottom tanjiro"">Documentations</h2>
       
       <!-- Conteneur principal avec position relative pour placer les boutons -->
       <div class="carousel-wrapper">
-        
-        <!-- Bouton Gauche -->
-        <button id="prev-btn" class="nav-btn prev" aria-label="Précédent">&lt;</button>
   
-        <!-- La zone de défilement (Track) -->
+        <!-- BOUTON GAUCHE (Prev) : Flèche vers la GAUCHE -->
+  <div class="styled-wrapper nav-btn prev" id="prev-btn">
+    <button class="button" aria-label="Précédent">
+      <div class="button-box">
+        <span class="button-elem">
+          <!-- Flèche standard vers la GAUCHE -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
+            <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
+          </svg>
+        </span>
+        <span class="button-elem">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
+            <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
+          </svg>
+        </span>
+      </div>
+    </button>
+  </div>
+      
+        <!-- TRACK (Inchangé) -->
         <div class="carousel-track" id="track">
           
+          <!-- CARTE 1 -->
           <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-            <img src="proxmox.webp" alt="">
             <div class="content">
-              <h2>Installation du service Proxmox sur un serveur</h2>
+              <img src="proxmoxlogo.jpg" alt="Logo Proxmox">
+              <h4>Installation du service Proxmox sur un serveur</h4>
             </div>
           </article>
-  
+      
+          <!-- CARTE 2 -->
           <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-            <img src="adwindows.png" alt="easter eggs">
             <div class="content">
-              <h2>Installation du service AD DS sur Windows Server</h2>
+              <img src="adlogo.jpg" alt="Logo Active Directory">
+              <h4>Installation du service AD DS sur Windows Server</h4>
             </div>
           </article>
-  
+      
+          <!-- CARTE 3 -->
           <article onclick="window.open('docproxmoxvm.pdf', '_blank')">
-            <img src="vmlogo.png" alt="hot cross buns">
             <div class="content">
-              <h2>Déploiement de machines virtuelles sur Proxmox</h2>
+              <img src="vmlogo.jpg" alt="Logo Virtual Machine">
+              <h4>Déploiement de machines virtuelles sur Proxmox</h4>
             </div>
           </article>
-  
+      
+          <!-- CARTE 4 -->
           <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-            <img src="gpo.png" alt="easter chick">
             <div class="content">
-              <h2>Mise en place de stratégies de groupe (GPO)</h2>
+              <img src="gpologo.jpg" alt="Logo GPO">
+              <h4>Mise en place de stratégies de groupe (GPO)</h4>
             </div>
           </article>
-  
+      
+          <!-- CARTE 5 -->
           <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-            <img src="wordpresslogo.png" alt="easter bunny">
             <div class="content">
-               <h2>Déploiement sécurisé de Wordpress</h2>
+              <img src="wordpresslogo.jpg" alt="Logo Wordpress">
+              <h4>Déploiement sécurisé de Wordpress</h4>
             </div>
           </article>
-  
+      
+          <!-- CARTE 6 -->
           <article onclick="window.open('docdhcpwinserver.pdf', '_blank')">
-            <img src="arpspoofing.webp" alt="crown of thorms">
             <div class="content">
-              <h2>Mise en oeuvre du service DHCP sur Windows Server</h2>
+              <img src="dhcplogo.png" alt="Logo DHCP">
+              <h4>Mise en oeuvre du service DHCP sur Windows Server</h4>
             </div>
           </article>
-  
+      
         </div>
-  
-        <!-- Bouton Droite -->
-        <button id="next-btn" class="nav-btn next" aria-label="Suivant">&gt;</button>
-        
+      
+        <!-- BOUTON DROITE (Next) -->
+        <div class="styled-wrapper nav-btn next" id="next-btn">
+          <button class="button" aria-label="Suivant">
+            <div class="button-box">
+              <span class="button-elem">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
+                  <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
+                </svg>
+              </span>
+              <span class="button-elem">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
+                  <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
+                </svg>
+              </span>
+            </div>
+          </button>
+        </div>
+      
       </div>
+      
+      
     </div>
   </section>
   
 
  <!-- SECTION EPREUVES -->
-<section id="epreuves">
-  <div class="container py-4"> 
-    <header class="pb-3 mb-4 border-bottom"> 
-      <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none"> 
-        <h1 class="display-5 fw-bold text-pastel-bleu">EPREUVES</h1> 
-      </a> 
-    </header> 
-    
-    <div class="epreuve-item shadow-sm rounded-lg mb-5">
-      <div class="epreuve-content px-4 py-4">
-        <h2 class="epreuve-title text-center neon-rose mb-3">
-          E4 - Support et mise à disposition de services informatiques
-        </h2>
-        <br>
-        <div class="row gx-4 gy-2 justify-content-center">
-          <div class="col-12 col-md-10">
-            <div class="epreuve-meta mb-3 text-center">
-              <span class="badge rounded-pill bg-pastel-violet text-pastel-bleu fs-6 me-2">
-               Coefficient : 4
-              </span>
-              <span class="badge rounded-pill bg-pastel-violet text-pastel-bleu fs-6 me-2">
-                Durée : 40 min, orale
-              </span>
-            </div>
-            <br>
-            <article class="epreuve-description px-3 py-2 rounded-lg bg-pastel-light-rose">
-              <p class="mb-2">
-                <strong class="text-pastel-violet"><i class="bi bi-bullseye me-1"></i> Objectif : </strong>
-                Évaluer les compétences du bloc « Support et mise à disposition de services informatiques ».
-              </p>
-              <p class="mb-2">
-                <strong class="text-pastel-violet"><i class="bi bi-list-task me-1"></i> Déroulement : </strong>
-                Présentation orale de 10 minutes sur le parcours professionnel et l’acquisition des compétences.
-                Puis, 30 minutes d’échange avec le jury pour approfondir le parcours et une ou plusieurs réalisations du dossier.
-                L’entretien évalue la capacité à mobiliser les compétences et à rendre compte de sa contribution dans un projet d’équipe.
-              </p>
-            </article>
-            <div class="text-center mt-4">
-              <button class="button-cv synthese-btn btn-lg" type="button">
-                <span>Tableau de synthèse</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-    
-    
-    <div class="row align-items-md-stretch"> 
-      <div class="epreuve-item shadow-sm rounded-lg mb-5 bg-pastel-rose">
-        <div class="epreuve-content px-4 py-4">
-          <h2 class="epreuve-title text-center neon-rose mb-3">
-            E5 - Administration des systèmes et réseaux
-          </h2>
-          <br>
-          <div class="row gx-4 gy-2 justify-content-center">
-            <div class="col-12 col-md-10">
-              <div class="epreuve-meta mb-3 text-center">
-                <span class="badge rounded-pill bg-pastel-violet text-pastel-bleu fs-6 me-2">
-                 Coefficient : 4
-                </span>
-                <span class="badge rounded-pill bg-pastel-violet text-pastel-bleu fs-6 me-2">
-                  Durée : pratique et orale — 40 min (+1h30 préparation)
-                </span>
-              </div>
-              <br>
-              <article class="epreuve-description px-3 py-2 rounded-lg bg-pastel-light-rose">
-                <p class="mb-2">
-                  <strong class="text-pastel-violet"><i class="bi bi-bullseye me-1"></i> Objectif : </strong>
-                  Évaluer les compétences du bloc « Administration des systèmes et des réseaux » de l’option « Solutions d’infrastructure, systèmes et réseaux », notamment :
-                </p>
-                <ul class="mb-2 ps-4">
-                  <li>Concevoir, installer et déployer une infrastructure réseau</li>
-                  <li>Exploiter, dépanner et superviser l’infrastructure</li>
-                </ul>
-                <p class="mb-2">
-                  <strong class="text-pastel-violet"><i class="bi bi-list-task me-1"></i> Déroulement : </strong>
-                  <br>
-                  <span class="fw-semibold">Phase 1 :</span> 30 minutes de préparation, puis entretien de 20 minutes sur l’analyse des besoins, les solutions proposées, leurs justifications, et la méthodologie.
-                  <br>
-                  <span class="fw-semibold">Phase 2 :</span> 1 heure de préparation individuelle pour réaliser la solution, suivie d’un entretien de 20 minutes pour valider la réalisation.
-                </p>
-              </article>
-              <div class="text-center mt-4">
-                <button class="button-cv synthese-btn btn-lg" type="button">
-                  <span>Fiche de réalisation professionnelle 1</span>
-                </button>
-                <br>
-                <button class="button-cv synthese-btn btn-lg" type="button">
-                  <span>Fiche de réalisation professionnelle 2</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-       
-      <div class="epreuve-item shadow-sm rounded-lg mb-5 bg-pastel-rose">
-        <div class="epreuve-content px-4 py-4">
-          <h2 class="epreuve-title text-center neon-rose mb-3">
-            Parcours de certification complémentaire
-          </h2>
-          <br>
-          <div class="row gx-4 gy-2 justify-content-center">
-            <div class="col-12 col-md-10">
-              <div class="epreuve-meta mb-3 text-center">
-                <span class="badge rounded-pill bg-pastel-violet text-pastel-bleu fs-6 me-2">
-                  Coefficient : 1
-                </span>
-                <span class="badge rounded-pill bg-pastel-violet text-pastel-bleu fs-6 me-2">
-                  Durée : 20 min, orale (sans préparation)
-                </span>
-              </div>
-              <br>
-              <article class="epreuve-description px-3 py-2 rounded-lg bg-pastel-light-rose">
-                <p class="mb-2">
-                  <strong class="text-pastel-violet"><i class="bi bi-bullseye me-1"></i> Objectif : </strong>
-                  Évaluer la démarche pour acquérir des compétences complémentaires, enrichir son parcours et préparer son évolution professionnelle.
-                </p>
-                <p class="mb-2">
-                  <strong class="text-pastel-violet"><i class="bi bi-list-task me-1"></i> Déroulement : </strong>
-                  Exposé de 10 minutes présentant le besoin, la démarche, les certifications passées et leurs apports.<br>
-                  Entretien de 10 minutes avec la commission, composée d’un enseignant en STS Services informatiques aux organisations.
-                </p>
-                <p class="mb-2">
-                  <strong class="text-pastel-violet"><i class="bi bi-check2-circle me-1"></i> Évaluation : </strong>
-                </p>
-                <ul class="mb-2 ps-4">
-                  <li>Pertinence des besoins exprimés</li>
-                  <li>Connaissance des certifications disponibles</li>
-                  <li>Adéquation des certifications avec le projet professionnel</li>
-                  <li>Démarche de préparation</li>
-                  <li>Résultats obtenus</li>
-                </ul>
-              </article>
-              <div class="text-center mt-4">
-                <button class="button-cv synthese-btn btn-lg" type="button">
-                  <span>Mon Parcours de certification</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+ <section id="epreuves">
+  <div class="container py-4">
+    <h2 style="text-align: center" class="pb-2 border-bottom tanjiro">Épreuves</h2><br>
+
+    <!-- Conteneur du Carousel -->
+    <div class="neo-carousel-wrapper">
       
-    </div> 
+      <!-- CARTE 1 : E4 -->
+      <div class="neo-card bg-rose">
+        <div class="neo-head">E4 - Support & Services</div>
+        <div class="neo-content">
+          <div class="neo-meta">
+            <span class="neo-badge">Coeff : 4</span>
+            <span class="neo-badge">40 min (oral)</span>
+          </div>
+          <p class="mt-3 mb-2">
+            <strong> Objectif :</strong> Évaluer les compétences du bloc « Support et mise à disposition ».
+          </p>
+          <p class="small mb-0"> <!-- Ajout mb-0 pour réduire l'espace sous le texte -->
+            Présentation orale (10 min) + Échange jury (30 min). Évalue la contribution dans un projet d'équipe.
+          </p>
+          <!-- MODIFICATION ICI : mt-3 au lieu de mt-auto pour réduire l'espace -->
+          <div class="mt-3 pt-2 text-center">
+            <button class="neo-button">Tableau de synthèse</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARTE 2 : E5 -->
+      <div class="neo-card bg-blue">
+        <div class="neo-head">E5 - Admin. Sys & Réseaux</div>
+        <div class="neo-content">
+          <div class="neo-meta">
+            <span class="neo-badge">Coeff : 4</span>
+            <span class="neo-badge">Pratique + Oral</span>
+          </div>
+          <p class="mt-3 mb-2">
+            <strong> Objectif :</strong> Concevoir, déployer et dépanner une infrastructure réseau.
+          </p>
+          <ul class="small ps-3 mb-0"> <!-- Ajout mb-0 -->
+            <li>Phase 1 : Entretien analyse (20 min)</li>
+            <li>Phase 2 : Réalisation (1h) + Validation (20 min)</li>
+          </ul>
+          
+          <!-- MODIFICATION ICI : Boutons côte à côte -->
+          <div class="mt-3 pt-2 d-flex gap-2">
+            <!-- w-50 pour qu'ils prennent chacun la moitié de la place -->
+            <button class="neo-button w-50">AP 1</button>
+            <button class="neo-button w-50">AP 2</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARTE 3 : Certification -->
+      <div class="neo-card bg-yellow">
+        <div class="neo-head">Parcours de Certification</div>
+        <div class="neo-content">
+          <div class="neo-meta">
+            <span class="neo-badge">Coeff : 1</span>
+            <span class="neo-badge">20 min (oral)</span>
+          </div>
+          <p class="mt-3 mb-2">
+            <strong> Objectif :</strong> Valoriser l'acquisition de compétences complémentaires.
+          </p>
+          <p class="small mb-0"> <!-- Ajout mb-0 -->
+            Exposé (10 min) + Entretien (10 min). Évaluation de la pertinence et de la démarche.
+          </p>
+          <!-- MODIFICATION ICI : mt-3 au lieu de mt-auto -->
+          <div class="mt-3 pt-2 text-center">
+            <button class="neo-button">Mon Parcours</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
+
+
 <!-- FIN SECTION EPREUVES-->
 
 
 
   <!-- SECTION VEILLE TECHNOLOGIQUE -->
 
-<section id="veille">
-<div class="degrade-top"></div>
-<div class="position-relative overflow-hidden p-3 p-md-5 m-0 text-center"
-     style="background-image: url('techpink.jpg'); background-size: cover; background-position: center; min-height: 350px; width: 100vw; margin-left: calc(-50vw + 50%);">
-
-  <div class="col-md-6 p-lg-5 mx-auto my-5">
-    <h1 class="display-3 fw-bold neon-rose">Veille Technologique</h1>
-    <div>
-      <br>
-      <h4 class="fw-normal mb-3 veille-col veille-texte-blur mt-4">
-        La veille technologique est essentielle dans le domaine de l'informatique, où les innovations et les évolutions sont constantes.<br>
-        J'ai choisi de me concentrer sur la virtualisation des systèmes.
-      </h4>
+  <section id="veille" class="container my-5">
+    <!-- La "Carte" principale qui prend toute la largeur -->
+    <div class="window-card">
+      
+      <!-- En-tête de la fenêtre -->
+      <div class="window-head d-flex justify-content-between align-items-center">
+        <span class="text-uppercase"><i class="fas fa-search me-2"></i>Veille_Technologique.exe</span>
+        <!-- Petits carrés déco à droite pour l'effet "fenêtre" -->
+        <div class="d-flex gap-2">
+          <div style="width: 12px; height: 12px; border: 2px solid black; background: #fff;"></div>
+          <div style="width: 12px; height: 12px; border: 2px solid black; background: #000;"></div>
+        </div>
+      </div>
+  
+      <!-- Contenu flexible -->
+      <div class="window-content p-4">
+        <div class="row align-items-center">
+          
+          <!-- Partie Gauche : Texte -->
+          <div class="col-lg-7 mb-3 mb-lg-0">
+            <h2 class="fw-black text-uppercase mb-2" style="font-size: 1.8rem; letter-spacing: -1px;">
+              Virtualisation des Systèmes
+            </h2>
+            <p class="mb-0 fw-bold opacity-75">
+              L'innovation au cœur de l'infrastructure : hyperviseurs, conteneurs et optimisation des ressources.
+            </p>
+          </div>
+  
+          <!-- Partie Droite : Boutons -->
+          <div class="col-lg-5 d-flex gap-3 justify-content-lg-end justify-content-start flex-wrap">
+            <button class="window-btn">
+              <i class="fas fa-file-alt me-2"></i>Rapport
+            </button>
+            <button class="window-btn">
+              <i class="fas fa-code me-2"></i>Mise en œuvre
+            </button>
+          </div>
+  
+        </div>
+      </div>
     </div>
-    <br>
-    <div class="d-flex gap-3 justify-content-center lead fw-normal mt-4">
-      <button class="button-cv synthese-btn btn-lg" type="button">
-        <span>Rapport de veille</span>
-      </button>
-      <button class="button-cv synthese-btn btn-lg" type="button">
-        <span>Mise en oeuvre</span>
-      </button>
-    </div>
-  </div>
-  <div class="product-device shadow-sm d-none d-md-block"></div>
-  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-</div>
-<div class="degrade-bottom"></div>
-</section>
+  </section>
+  
+  
 
   <!-- FIN SECTION VEILLE TECHNOLOGIQUE -->
 
@@ -679,38 +923,45 @@
 <!-- MODAL ALTERNANCE -->
 <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content rounded-3">
+    <!-- Suppression de rounded-3 -->
+    <div class="modal-content"> 
       <div class="modal-header">
         <h5 class="modal-title" id="infoModalLabel">Mon rôle</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
       </div>
-      <div class="modal-body text-center bg-body-tertiary p-5">
-        <img src="macif.png" alt="Logo Macif" class="mb-3" style="width: 100px; height: 100px; object-fit: contain;">
-        <p class="fs-5 text-muted">
+      <!-- Suppression de bg-body-tertiary pour laisser voir le rose -->
+      <div class="modal-body text-center p-5">
+        <img src="macif.png" alt="Logo Macif" class="mb-3" style="width: 100px; height: 100px; object-fit: contain; border: 3px solid black; box-shadow: 4px 4px 0 black;">
+        <p class="fs-6 mt-3"> <!-- fs-6 un peu plus petit pour le style Montserrat -->
           <strong>En tant que Chargée d'assistance utilisateurs, mes missions principales sont :</strong>
-          <br><br>
-          <u>Support de proximité</u> <br>
-          - Prise en charge et résolution des tickets d’incident et de demande via EasyVista <br>
-          - Installation, mise à jour et maintenance des logiciels et équipements informatiques <br>
-          - Gestion quotidienne de l’inventaire du matériel (entrée, sortie, renouvellement) <br>
-          - Traitement et suivi des demandes utilisateurs : assistance, conseils et accompagnement <br>
-          - Déploiement, préparation et configuration des postes de travail pour les nouveaux arrivants ou lors des renouvellements <br>
-          - Organisation logistique : commandes, réception et distribution des matériels informatiques <br><br>
-          <u>Administration des postes de travail et des impressions</u> <br>
-          - Installation, paramétrage et maintenance des postes de travail (ordinateur fixe/portable) <br>
-          - Gestion et suivi du parc d’imprimantes, résolution des incidents techniques <br>
-          - Traitement des tickets techniques de niveaux 2 et 3 nécessitant une expertise avancée <br>
-          - Administration des comptes utilisateurs, attribution et gestion des droits d’accès aux ressources numériques <br>
-          - Participation active aux projets informatiques : migration ou renouvellement du parc, accompagnement au changement <br><br>
-          À travers ces missions, je contribue au maintien opérationnel du SI et à la satisfaction des utilisateurs, tout en participant à l’évolution des outils et des pratiques au sein de l’entreprise.
+<br><br>
+<u>Support de proximité</u> <br>
+- Prise en charge et résolution des tickets d’incident et de demande via EasyVista <br>
+- Installation, mise à jour et maintenance des logiciels et équipements informatiques <br>
+- Gestion quotidienne de l’inventaire du matériel (entrée, sortie, renouvellement) <br>
+- Traitement et suivi des demandes utilisateurs : assistance, conseils et accompagnement <br>
+- Déploiement, préparation et configuration des postes de travail pour les nouveaux arrivants ou lors des renouvellements <br>
+- Organisation logistique : commandes, réception et distribution des matériels informatiques <br><br>
+<u>Administration des postes de travail et des impressions</u> <br>
+- Installation, paramétrage et maintenance des postes de travail (ordinateur fixe/portable) <br>
+- Gestion et suivi du parc d’imprimantes, résolution des incidents techniques <br>
+- Traitement des tickets techniques de niveaux 2 et 3 nécessitant une expertise avancée <br>
+- Administration des comptes utilisateurs, attribution et gestion des droits d’accès aux ressources numériques <br>
+- Participation active aux projets informatiques : migration ou renouvellement du parc, accompagnement au changement <br><br>
+À travers ces missions, je contribue au maintien opérationnel du SI et à la satisfaction des utilisateurs, tout en participant à l’évolution des outils et des pratiques au sein de l’entreprise.
+</p>
+          <!-- Ton contenu texte reste ici -->
+          ...
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Fermer</button>
+        <!-- Suppression des classes Bootstrap classiques pour utiliser notre style perso -->
+        <button type="button" class="btn" data-bs-dismiss="modal">Fermer</button>
       </div>
     </div>
   </div>
 </div>
+
 
 </body>
 </html>

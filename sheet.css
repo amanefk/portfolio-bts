@@ -48,6 +48,10 @@
   .bg-pastel-light-rose {
     background-color: #fee5f3 !important;
   }
+
+
+
+
   
  /*NAVBAR */
 
@@ -1476,4 +1480,16 @@
   .window-btn {
     width: 100%; /* Boutons pleine largeur sur mobile */
   }
+}
+
+/* surlignement bouttons */
+.window-btn{
+  text-decoration: none;
+}
+
+/* optionnel : pour être sûr que ça ne se souligne jamais */
+.window-btn:hover,
+.window-btn:visited,
+.window-btn:active{
+  text-decoration: none;
 }

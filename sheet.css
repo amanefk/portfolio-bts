@@ -1493,3 +1493,9 @@
 .window-btn:active{
   text-decoration: none;
 }
+
+.conteneur-pro {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

@@ -201,7 +201,7 @@
                 <span class="price-currency">+</span>BAC+2
                 <span class="price-period">Niveau 5</span>
               </div>
-              <button class="card-button">Détails</button>
+                <button class="card-button" onclick="window.open('https://ecole-ipssi.com/formations-informatique/bts-informatique-sio-sisr-slam/', '_blank')">Détails</button>
             </div>
           </div>
         
@@ -286,10 +286,9 @@
 
       <!-- Ton Dropdown "Mes travaux" -->
       <div class="dropdown flex-grow-1">
-        <button class="card-button dropdown-toggle w-100 d-flex justify-content-between align-items-center"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false">
+        <button class="card-button w-100 d-flex justify-content-center align-items-center"
+          type="button"
+          onclick="window.location.href='#projets';">
           <span>Mes travaux</span>
         </button>
         <ul class="dropdown-menu">
@@ -439,7 +438,7 @@
         <span class="price-period">Format PDF</span>
       </div>
       <!-- Remplace 'mon_cv.pdf' par le vrai lien de ton CV -->
-      <a href="mon_cv.pdf" target="_blank" class="text-decoration-none">
+      <a href="CV.pdf" target="_blank" class="text-decoration-none">
         <button class="card-button">Télécharger</button>
       </a>
     </div>
@@ -555,7 +554,6 @@
         <span class="price-currency">@</span>BAC+5
         <span class="price-period">Objectif</span>
       </div>
-      <button class="card-button">Me contacter</button>
     </div>
 
   </div>
@@ -611,24 +609,6 @@
       <!-- Conteneur principal avec position relative pour placer les boutons -->
       <div class="carousel-wrapper">
   
-        <!-- BOUTON GAUCHE (Prev) : Flèche vers la GAUCHE -->
-  <div class="styled-wrapper nav-btn prev" id="prev-btn">
-    <button class="button" aria-label="Précédent">
-      <div class="button-box">
-        <span class="button-elem">
-          <!-- Flèche standard vers la GAUCHE -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
-            <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
-          </svg>
-        </span>
-        <span class="button-elem">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
-            <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
-          </svg>
-        </span>
-      </div>
-    </button>
-  </div>
       
         <!-- TRACK (Inchangé) -->
         <div class="carousel-track" id="track">
@@ -683,25 +663,6 @@
       
         </div>
       
-        
-
-        <!-- BOUTON DROITE (Next) -->
-        <div class="styled-wrapper nav-btn next" id="next-btn">
-          <button class="button" aria-label="Suivant">
-            <div class="button-box">
-              <span class="button-elem">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
-                  <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
-                </svg>
-              </span>
-              <span class="button-elem">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
-                  <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
-                </svg>
-              </span>
-            </div>
-          </button>
-        </div>
       
       </div>
 
@@ -732,7 +693,15 @@
           <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
             <div class="content">
               <img src="adlogo.jpg" alt="Logo Active Directory">
-              <h4>Gestion de projet de remplacement de postes</h4>
+              <h4>Gestion de projet: remplacement de postes osbolètes</h4>
+            </div>
+          </article>
+
+          <!-- CARTE 4 -->
+          <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
+            <div class="content">
+              <img src="adlogo.jpg" alt="Logo Active Directory">
+              <h4>Réinitialisation ou modification d'un mot de passe utilisateur</h4>
             </div>
           </article>
 
@@ -798,8 +767,8 @@
           <!-- MODIFICATION ICI : Boutons côte à côte -->
           <div class="mt-3 pt-2 d-flex gap-2">
             <!-- w-50 pour qu'ils prennent chacun la moitié de la place -->
-            <button class="neo-button w-50">AP 1</button>
-            <button class="neo-button w-50">AP 2</button>
+            <button class="neo-button w-50">Activité 1 : Routage <br>inter-vlan</button>
+            <button class="neo-button w-50">Activité 2 :<br> GLPI </button>
           </div>
         </div>
       </div>

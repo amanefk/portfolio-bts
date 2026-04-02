@@ -34,6 +34,198 @@
     background-color: #FFB6E6;
   }
 
+/* ===== HERO / HEADER ===== */
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  background: #fff;
+  border: 2.5px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  padding: 0.35em 0.9em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.1rem;
+  border-radius: 0.3em;
+  color: #000;
+}
+
+.hero-badge-dot {
+  width: 7px;
+  height: 7px;
+  background: #AF7EFF;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1.5px solid #000;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+}
+
+.hero-typed-wrapper {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-typed-tag {
+  display: inline-flex;
+  align-items: center;
+  background: #AF7EFF;
+  border: 2.5px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  padding: 0.2em 0.75em;
+  border-radius: 0.3em;
+  font-weight: 900;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.hero-typed-tag .typed,
+.hero-typed-tag .typed-cursor {
+  color: #fff !important;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #111;
+}
+
+.hero-divider {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #AF7EFF, #FFB6E6);
+  border: none;
+  border-radius: 2px;
+  margin: 1.4rem 0;
+  opacity: 1;
+}
+
+.hero-socials {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hero-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.55em 1.15em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  color: #000;
+  background: #FFD7ED;
+  border: 2.5px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  border-radius: 0.3em;
+  transition: all 0.18s ease;
+}
+
+.hero-social-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
+  color: #000;
+  background: #C8B6FF;
+}
+
+.hero-social-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000;
+}
+
+.hero-social-btn i {
+  font-size: 1.15em;
+}
+
+/* Photo néo-brutaliste */
+.hero-photo-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-photo-frame {
+  position: relative;
+  display: inline-block;
+  border: 4px solid #000;
+  box-shadow: 10px 10px 0 #000;
+  border-radius: 50%;
+  transform: rotate(-2deg);
+  transition: all 0.3s ease;
+  max-width: 380px;
+  width: 100%;
+  background: #FFB6E6;
+  overflow: hidden;
+}
+
+.hero-photo-frame:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 14px 14px 0 #000;
+}
+
+.hero-photo-img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-photo-deco {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  background: #fff;
+  border: 2.5px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  padding: 0.3em 0.7em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #000;
+  transform: rotate(3deg);
+  border-radius: 0.25em;
+}
+
+@media (max-width: 768px) {
+  .hero-photo-frame {
+    max-width: 260px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-typed-wrapper {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== FIN HERO ===== */
+
  /*NAVBAR */
 
   .navbar {

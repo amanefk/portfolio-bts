@@ -7,7 +7,6 @@
   <!-- CSS BOOTSTRAP-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- ICONS BOOTSTRAP -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <!-- CSS PERSONNALISE-->
   <link rel="stylesheet" href="sheet.css">
@@ -17,15 +16,41 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <!--NAVBAR-->
 
 <body class="bg-pastel-rose">
 
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-scanlines"></div>
+    <span class="loader-star s1">✦</span>
+    <span class="loader-star s2">♥</span>
+    <span class="loader-star s3">★</span>
+    <span class="loader-star s4">✦</span>
+    <span class="loader-star s5">♥</span>
+    <span class="loader-star s6">◆</span>
+    <div class="loader-box">
+      <div class="loader-system">SYS.EXE &nbsp; v2.0.25</div>
+      <div class="loader-title">PORTFOLIO</div>
+      <div class="loader-subtitle">&gt; AMINA FAKHIR_</div>
+      <div class="loader-divider"></div>
+      <div class="loader-label">LOADING...</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loader-bar"></div>
+      </div>
+      <div class="loader-percent" id="loader-percent">0%</div>
+      <div class="loader-icons">
+        <span>♥</span><span>✦</span><span>★</span><span>◆</span><span>♥</span>
+      </div>
+    </div>
+  </div>
+
   <nav class="navbar navbar-expand-lg fixed-top mt-8">
     <div class="container-fluid">
-      <a class="navbar-brand tanjiro"" href="#">Portfolio</a>
+      <a class="navbar-brand tanjiro" href="#">Portfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" style="filter: invert(100%);"></span>
       </button>
@@ -33,10 +58,10 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item tanjiro"><a class="nav-link" href="#">Accueil</a></li>
-          <li class="nav-item tanjiro""><a class="nav-link" href="#apropos">À propos</a></li>
-          <li class="nav-item tanjiro""><a class="nav-link" href="#projets">Projets</a></li>
-          <li class="nav-item tanjiro""><a class="nav-link" href="#epreuves">Épreuves</a></li>
-          <li class="nav-item tanjiro""><a class="nav-link" href="#veille">Veille</a></li>
+          <li class="nav-item tanjiro"><a class="nav-link" href="#apropos">À propos</a></li>
+          <li class="nav-item tanjiro"><a class="nav-link" href="#projets">Projets</a></li>
+          <li class="nav-item tanjiro"><a class="nav-link" href="#epreuves">Épreuves</a></li>
+          <li class="nav-item tanjiro"><a class="nav-link" href="#veille">Veille</a></li>
         </ul>
       </div>
     </div>
@@ -46,29 +71,59 @@
 
   <div id ="accueil" class="container aos-init aos-animate mt-5" data-aos="fade-up" data-aos-delay="100">
 
-    <div class="row gy-4 align-items-center spacer-custom ">
+    <div class="row gy-4 align-items-center spacer-custom">
       <div class="col-lg-6 order-2 order-lg-1">
         <div class="hero-content">
-          <h1 data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate font-weight-bold fs-1">Bonjour, je suis <span class="highlight text-pastel-bleu">Amina Fakhir</span></h1>
-          <h2 data-aos="fade-up" data-aos-delay="300" class="aos-init aos-animate fs-2">Etudiante en <span class="typed text-pastel-bleu" 
-            data-typed-items="BTS SIO, option SISR">BTS SIO, option SISR
-          </span><span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span></h2>
-          <p data-aos="fade-up" data-aos-delay="400" class="aos-init aos-animate mt-5 fs-5" >Actuellement étudiante à l'école IPSSI, 
-            je vous invite à découvrir sur ce portfolio un aperçu de 
-            mon parcours académique et professionnel. Vous y trouverez 
-            mon CV ainsi qu’une présentation des différents projets que 
-            j’ai réalisés au cours de ma formation scolaire et professionnelle.</p>
-          <div class="social-links aos-init aos-animate mt-4 fs-3" data-aos="fade-up" data-aos-delay="600">
-            <a href="https://linkedin.com/in/amina-fakhir-92b7a3195" target="_blank"><i class="bi bi-linkedin me-3"></i></a>
-            <a href="https://github.com/amanefk" target="_blank"><i class="bi bi-github"></i></a>
+
+          <!-- Badge au-dessus du titre -->
+          <div class="hero-badge" data-aos="fade-up" data-aos-delay="100">
+            <span>✦ Alternance</span>
+            <span class="hero-badge-dot"></span>
+            <span>MACIF × IPSSI Paris</span>
           </div>
+
+          <!-- Titre principal -->
+          <h1 data-aos="fade-up" data-aos-delay="200" class="hero-title tanjiro">
+            Bonjour, je suis <span class="text-pastel-bleu">Amina Fakhir</span>
+          </h1>
+
+          <!-- Sous-titre avec tag néo-brut -->
+          <div data-aos="fade-up" data-aos-delay="300" class="hero-typed-wrapper">
+            Étudiante en
+            <span class="hero-typed-tag">
+              <span class="typed" data-typed-items="BTS SIO, option SISR">BTS SIO, option SISR</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span>
+            </span>
+          </div>
+
+          <!-- Description -->
+          <p data-aos="fade-up" data-aos-delay="400" class="hero-desc">
+            Actuellement étudiante à l’école IPSSI, je vous invite à découvrir sur ce portfolio un aperçu de
+            mon parcours académique et professionnel. Vous y trouverez mon CV ainsi qu’une présentation
+            des différents projets réalisés au cours de ma formation.
+          </p>
+
+          <!-- Séparateur déco -->
+          <hr class="hero-divider" data-aos="fade-up" data-aos-delay="500">
+
+          <!-- Boutons sociaux néo-brutalistes -->
+          <div class="hero-socials" data-aos="fade-up" data-aos-delay="600">
+            <a href="https://linkedin.com/in/amina-fakhir-92b7a3195" target="_blank" class="hero-social-btn">
+              <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/amanefk" target="_blank" class="hero-social-btn">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </div>
+
         </div>
       </div>
       <div class="col-lg-6 order-1 order-lg-2">
-        <div class="hero-image aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
-          <div class="image-wrapper" style="text-align: center;" >
-            <img src="hero_photo.jpg" alt="Example image" class="img-fluid rounded-pill"
-            style="width: 100%; height: auto; object-fit: contain; max-width: 400px; margin: 0 auto;">
+        <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
+          <div class="hero-photo-wrapper">
+            <div class="hero-photo-frame">
+              <img src="images/hero_photo.jpg" alt="Amina Fakhir" class="hero-photo-img">
+            </div>
+            <div class="hero-photo-deco">BTS SIO</div>
           </div>
         </div>
       </div>
@@ -293,10 +348,10 @@
         </button>
         <ul class="dropdown-menu">
           <li>
-            <a class="dropdown-item" href="MOP_Fabrication_Postes.pdf" target="_blank">Fabrication de postes</a>
+            <a class="dropdown-item" href="documents/MOP_Fabrication_Postes.pdf" target="_blank">Fabrication de postes</a>
           </li>
           <li>
-            <a class="dropdown-item" href="MOP_Gestion_incidents.pdf" target="_blank">Gestion des incidents</a>
+            <a class="dropdown-item" href="documents/MOP_Gestion_incidents.pdf" target="_blank">Gestion des incidents</a>
           </li>
         </ul>
       </div>
@@ -438,7 +493,7 @@
         <span class="price-period">Format PDF</span>
       </div>
       <!-- Remplace 'mon_cv.pdf' par le vrai lien de ton CV -->
-      <a href="CV.pdf" target="_blank" class="text-decoration-none">
+      <a href="documents/CV.pdf" target="_blank" class="text-decoration-none">
         <button class="card-button">Télécharger</button>
       </a>
     </div>
@@ -582,138 +637,191 @@
 </section>
 
 
- <!-- SECTION PROJETS -->
+<!-- SECTION PROJETS -->
 <section id="projets">
-     <!-- Section Title -->
-  <!-- Section Title PROJETS -->
-<div class="container section-title aos-init aos-animate text-center mt-5" data-aos="fade-up">
-  <h2 class="text-pastel-bleu font-weight-bold highlight tanjiro">PROJETS</h2>
-  <br>
-  
-  <!-- Ajout des classes de centrage et de la largeur max -->
-  <p class="fs-5 mb-4 text-center mx-auto" style="max-width: 800px;">
-    En tant qu’étudiante en BTS SIO, j’ai développé des compétences solides en gestion et sécurisation 
-    des réseaux et systèmes informatiques. Cette formation m’a permis d’apprendre à installer, configurer et maintenir 
-    tout type d’infrastructure, tout en assurant le support aux utilisateurs au quotidien. Grâce à ce parcours, 
-    j’acquiers une expertise technique recherchée dans le monde professionnel. 
-  </p>
-  <br> 
-</div><!-- End Section Title -->
-<!-- End Section Title -->
 
-  <!-- SECTION DOCUMENTATIONS -->
-  <section>
-    <div class="container px-4 py-5" id="hanging-icons">
-      <h2 style ="text-align: center" class="pb-2 border-bottom tanjiro"">Scolaires</h2>
-      
-      <!-- Conteneur principal avec position relative pour placer les boutons -->
-      <div class="carousel-wrapper">
-  
-      
-        <!-- TRACK (Inchangé) -->
-        <div class="carousel-track" id="track">
-          
-          <!-- CARTE 1 -->
-          <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-            <div class="content">
-              <img src="proxmoxlogo.jpg" alt="Logo Proxmox">
-              <h4>Installation du service Proxmox sur un serveur</h4>
-            </div>
-          </article>
-      
-          <!-- CARTE 2 -->
-          <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-            <div class="content">
-              <img src="adlogo.jpg" alt="Logo Active Directory">
-              <h4>Installation du service AD DS sur Windows Server</h4>
-            </div>
-          </article>
-      
-          <!-- CARTE 3 -->
-          <article onclick="window.open('docproxmoxvm.pdf', '_blank')">
-            <div class="content">
-              <img src="vmlogo.jpg" alt="Logo Virtual Machine">
-              <h4>Déploiement de machines virtuelles sur Proxmox</h4>
-            </div>
-          </article>
-      
-          <!-- CARTE 4 -->
-          <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-            <div class="content">
-              <img src="gpologo.jpg" alt="Logo GPO">
-              <h4>Mise en place de stratégies de groupe (GPO)</h4>
-            </div>
-          </article>
-      
-          <!-- CARTE 5 -->
-          <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-            <div class="content">
-              <img src="wordpresslogo.jpg" alt="Logo Wordpress">
-              <h4>Déploiement sécurisé de Wordpress</h4>
-            </div>
-          </article>
-      
-          <!-- CARTE 6 -->
-          <article onclick="window.open('docdhcpwinserver.pdf', '_blank')">
-            <div class="content">
-              <img src="dhcplogo.png" alt="Logo DHCP">
-              <h4>Mise en oeuvre du service DHCP sur Windows Server</h4>
-            </div>
-          </article>
-      
-        </div>
-      
-      
-      </div>
+  <div class="container section-title text-center mt-5" data-aos="fade-up">
+    <h2 class="text-pastel-bleu font-weight-bold highlight tanjiro">PROJETS</h2>
+    <br>
+    <p class="fs-5 mb-4 text-center mx-auto" style="max-width: 800px;">
+      Mes réalisations scolaires et professionnelles, organisées selon les compétences du référentiel BTS SIO SISR.
+      Chaque section correspond à une compétence du tableau de synthèse E5.
+    </p>
 
-      <!-- DOCUMENTATIONS PRO-->
-      <div class="carousel-wrapper">
-        <h2 style ="text-align: center" class="pb-2 border-bottom tanjiro"">Professionnels</h2>
-      <div class="conteneur-pro">
-        <!-- TRACK (Inchangé) -->
-        <div class="carousel-track" id="track">
-          
-          <!-- CARTE 1 -->
-          <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-            <div class="content">
-              <img src="proxmoxlogo.jpg" alt="Logo Proxmox">
-              <h4>Fabrication d'un poste de travail</h4>
-            </div>
-          </article>
-      
-          <!-- CARTE 2 -->
-          <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-            <div class="content">
-              <img src="adlogo.jpg" alt="Logo Active Directory">
-              <h4>Gestion de demandes et incidents</h4>
-            </div>
-          </article>
-
-          <!-- CARTE 3 -->
-          <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-            <div class="content">
-              <img src="adlogo.jpg" alt="Logo Active Directory">
-              <h4>Gestion de projet: remplacement de postes osbolètes</h4>
-            </div>
-          </article>
-
-          <!-- CARTE 4 -->
-          <article onclick="window.open('docproxmoxinstall.pdf', '_blank')">
-            <div class="content">
-              <img src="adlogo.jpg" alt="Logo Active Directory">
-              <h4>Réinitialisation ou modification d'un mot de passe utilisateur</h4>
-            </div>
-          </article>
-
-        </div>
-      
-      </div>
-      
-      
+    <!-- Boutons filtres compétences -->
+    <div class="comp-filters" data-aos="fade-up" data-aos-delay="100">
+      <button class="comp-filter-btn active" data-filter="all">Toutes</button>
+      <button class="comp-filter-btn" data-filter="c1">C1 — Patrimoine</button>
+      <button class="comp-filter-btn" data-filter="c2">C2 — Incidents</button>
+      <button class="comp-filter-btn" data-filter="c3">C3 — Présence web</button>
+      <button class="comp-filter-btn" data-filter="c4">C4 — Mode projet</button>
+      <button class="comp-filter-btn" data-filter="c5">C5 — Mise à dispo</button>
+      <button class="comp-filter-btn" data-filter="c6">C6 — Dév. pro</button>
     </div>
   </div>
-  </section>
-  
+
+  <div class="container px-4 py-3">
+
+    <!-- ── C1 : Gérer le patrimoine informatique ── -->
+    <div class="competence-block" data-comp="c1" data-aos="fade-up">
+      <div class="competence-header">
+        <span class="competence-badge">C1</span>
+        <div>
+          <h3 class="competence-title">Gérer le patrimoine informatique</h3>
+          <p class="competence-desc">Recenser et identifier les ressources, exploiter les référentiels et normes, vérifier les sauvegardes et la continuité de service.</p>
+        </div>
+      </div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <article onclick="window.open(‘documents/docproxmoxinstall.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/proxmoxlogo.jpg" alt="Proxmox"><h4>Installation de Proxmox sur un serveur</h4></div>
+          </article>
+          <article onclick="window.open(‘documents/docproxmoxinstall.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/adlogo.jpg" alt="AD DS"><h4>Installation du service AD DS sur Windows Server</h4></div>
+          </article>
+          <article onclick="window.open(‘documents/docproxmoxvm.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/vmlogo.jpg" alt="VM"><h4>Déploiement de machines virtuelles sur Proxmox</h4></div>
+          </article>
+          <article onclick="window.open(‘documents/docproxmoxinstall.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/gpologo.jpg" alt="GPO"><h4>Mise en place de stratégies de groupe (GPO)</h4></div>
+          </article>
+          <article onclick="window.open(‘documents/docproxmoxinstall.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/wordpresslogo.jpg" alt="Wordpress"><h4>Déploiement sécurisé de Wordpress</h4></div>
+          </article>
+          <article onclick="window.open(‘documents/docdhcpwinserver.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/dhcplogo.png" alt="DHCP"><h4>Mise en œuvre du service DHCP sur Windows Server</h4></div>
+          </article>
+          <article onclick="window.open(‘documents/MOP_Fabrication_Postes.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/adlogo.jpg" alt="Fabrication poste"><h4>Fabrication d’un poste de travail Windows</h4></div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── C2 : Répondre aux incidents et aux demandes ── -->
+    <div class="competence-block" data-comp="c2" data-aos="fade-up">
+      <div class="competence-header">
+        <span class="competence-badge">C2</span>
+        <div>
+          <h3 class="competence-title">Répondre aux incidents et aux demandes d’assistance</h3>
+          <p class="competence-desc">Collecter, suivre et orienter les demandes, traiter les incidents réseau, système et applicatifs.</p>
+        </div>
+      </div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <article onclick="window.open(‘documents/MOP_Gestion_incidents.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/adlogo.jpg" alt="EasyVista"><h4>Gestion des demandes & incidents via EasyVista</h4></div>
+          </article>
+          <article onclick="window.open(‘documents/MOP_Fabrication_Postes.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/adlogo.jpg" alt="Fabrication poste"><h4>Fabrication d’un poste de travail Windows</h4></div>
+          </article>
+          <article>
+            <div class="content"><img src="images/adlogo.jpg" alt="GLPI"><h4>Installation et configuration de la solution GLPI</h4></div>
+          </article>
+          <article>
+            <div class="content"><img src="images/adlogo.jpg" alt="Gestion projet"><h4>Gestion de projet : remplacement de postes obsolètes</h4></div>
+          </article>
+          <article>
+            <div class="content"><img src="images/adlogo.jpg" alt="MDP"><h4>Réinitialisation ou modification d’un mot de passe utilisateur</h4></div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── C3 : Développer la présence en ligne ── -->
+    <div class="competence-block" data-comp="c3" data-aos="fade-up">
+      <div class="competence-header">
+        <span class="competence-badge">C3</span>
+        <div>
+          <h3 class="competence-title">Développer la présence en ligne de l’organisation</h3>
+          <p class="competence-desc">Référencer les services en ligne, participer à l’évolution du site Web, mesurer l’impact économique.</p>
+        </div>
+      </div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <article onclick="window.open(‘documents/docproxmoxinstall.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/wordpresslogo.jpg" alt="Wordpress"><h4>Déploiement sécurisé de Wordpress</h4></div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── C4 : Travailler en mode projet ── -->
+    <div class="competence-block" data-comp="c4" data-aos="fade-up">
+      <div class="competence-header">
+        <span class="competence-badge">C4</span>
+        <div>
+          <h3 class="competence-title">Travailler en mode projet</h3>
+          <p class="competence-desc">Analyser les objectifs et modalités d’organisation, planifier les activités, évaluer les indicateurs de suivi.</p>
+        </div>
+      </div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <article>
+            <div class="content"><img src="images/adlogo.jpg" alt="Gestion projet"><h4>Gestion de projet : remplacement de postes obsolètes</h4></div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── C5 : Mettre à disposition un service informatique ── -->
+    <div class="competence-block" data-comp="c5" data-aos="fade-up">
+      <div class="competence-header">
+        <span class="competence-badge">C5</span>
+        <div>
+          <h3 class="competence-title">Mettre à disposition des utilisateurs un service informatique</h3>
+          <p class="competence-desc">Déployer un service, réaliser les tests d’intégration et d’acceptation, accompagner les utilisateurs.</p>
+        </div>
+      </div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <article onclick="window.open(‘documents/docproxmoxinstall.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/gpologo.jpg" alt="GPO"><h4>Mise en place de stratégies de groupe (GPO)</h4></div>
+          </article>
+          <article onclick="window.open(‘documents/docproxmoxinstall.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/wordpresslogo.jpg" alt="Wordpress"><h4>Déploiement sécurisé de Wordpress</h4></div>
+          </article>
+          <article onclick="window.open(‘documents/docdhcpwinserver.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/dhcplogo.png" alt="DHCP"><h4>Mise en œuvre du service DHCP sur Windows Server</h4></div>
+          </article>
+          <article onclick="window.open(‘documents/docproxmoxvm.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/vmlogo.jpg" alt="VM"><h4>Déploiement de machines virtuelles sur Proxmox</h4></div>
+          </article>
+          <article onclick="window.open(‘documents/docproxmoxinstall.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/adlogo.jpg" alt="AD DS"><h4>Installation du service AD DS sur Windows Server</h4></div>
+          </article>
+          <article onclick="window.open(‘documents/docproxmoxinstall.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/proxmoxlogo.jpg" alt="Proxmox"><h4>Installation de Proxmox sur un serveur</h4></div>
+          </article>
+          <article onclick="window.open(‘documents/MOP_Fabrication_Postes.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/adlogo.jpg" alt="Fabrication poste"><h4>Fabrication d’un poste de travail Windows</h4></div>
+          </article>
+          <article>
+            <div class="content"><img src="images/adlogo.jpg" alt="Gestion projet"><h4>Gestion de projet : remplacement de postes obsolètes</h4></div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── C6 : Organiser son développement professionnel ── -->
+    <div class="competence-block" data-comp="c6" data-aos="fade-up">
+      <div class="competence-header">
+        <span class="competence-badge">C6</span>
+        <div>
+          <h3 class="competence-title">Organiser son développement professionnel</h3>
+          <p class="competence-desc">Mettre en œuvre les outils et stratégies de veille informationnelle, gérer son identité et son projet professionnel.</p>
+        </div>
+      </div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <article onclick="window.open(‘documents/Methode_veille_techno.pdf’, ‘_blank’)">
+            <div class="content"><img src="images/proxmox.webp" alt="Veille"><h4>Veille technologique</h4></div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
  <!-- SECTION EPREUVES -->
  <section id="epreuves">
@@ -738,12 +846,10 @@
           <p class="small mb-0"> <!-- Ajout mb-0 pour réduire l'espace sous le texte -->
             Présentation orale (10 min) + Échange jury (30 min). Évalue la contribution dans un projet d'équipe.
           </p>
-          <!-- MODIFICATION ICI : mt-3 au lieu de mt-auto pour réduire l'espace -->
-          <div class="mt-3 pt-2 text-center" class="neo-button"
-          role="link" tabindex="0"
-          onclick="window.open('E5.pdf','_blank')"
-          onkeydown="if(event.key==='Enter') window.open('E5.pdf','_blank')">
-            <button class="neo-button">Tableau de synthèse</button>
+          <div class="mt-3 pt-2 text-center">
+            <button class="neo-button w-100" data-bs-toggle="modal" data-bs-target="#syntheseModal">
+              Tableau de synthèse
+            </button>
           </div>
         </div>
       </div>
@@ -764,11 +870,14 @@
             <li>Phase 2 : Réalisation (1h) + Validation (20 min)</li>
           </ul>
           
-          <!-- MODIFICATION ICI : Boutons côte à côte -->
           <div class="mt-3 pt-2 d-flex gap-2">
-            <!-- w-50 pour qu'ils prennent chacun la moitié de la place -->
-            <button class="neo-button w-50">Activité 1 : Routage <br>inter-vlan</button>
+            <button class="neo-button w-50">Activité 1 : Cluster<br>DHCP</button>
             <button class="neo-button w-50">Activité 2 :<br> GLPI </button>
+          </div>
+          <div class="mt-2">
+            <button class="neo-button w-100" data-bs-toggle="modal" data-bs-target="#schemaModal">
+              Schéma réseau
+            </button>
           </div>
         </div>
       </div>
@@ -807,46 +916,120 @@
   <!-- SECTION VEILLE TECHNOLOGIQUE -->
 
   <section id="veille" class="container my-5">
-    <!-- La "Carte" principale qui prend toute la largeur -->
     <div class="window-card">
-      
-      <!-- En-tête de la fenêtre -->
+
+      <!-- En-tête fenêtre -->
       <div class="window-head d-flex justify-content-between align-items-center">
-        <span class="text-uppercase"><i class="fas fa-search me-2"></i>Veille_Technologique.exe</span>
-        <!-- Petits carrés déco à droite pour l'effet "fenêtre" -->
+        <span class="text-uppercase fw-black">⚡ Veille_Technologique.exe</span>
         <div class="d-flex gap-2">
-          <div style="width: 12px; height: 12px; border: 2px solid black; background: #fff;"></div>
-          <div style="width: 12px; height: 12px; border: 2px solid black; background: #000;"></div>
+          <div style="width:12px;height:12px;border:2px solid black;background:#fff;"></div>
+          <div style="width:12px;height:12px;border:2px solid black;background:#000;"></div>
         </div>
       </div>
-  
-      <!-- Contenu flexible -->
+
       <div class="window-content p-4">
-        <div class="row align-items-center">
-          
-          <!-- Partie Gauche : Texte -->
-          <div class="col-lg-7 mb-3 mb-lg-0">
-            <h2 class="fw-black text-uppercase mb-2" style="font-size: 1.8rem; letter-spacing: -1px;">
-              Thèmes : Virtualisation des Systèmes / Informatique Quantique
-            </h2>
-            <p class="mb-0 fw-bold opacity-75">
-              La veille technologique consiste à s'informer de façon systématique sur les techniques les plus récentes et surtout sur leur mise à disposition.
-              <br>Pour me tenir informée, j'ai utilisé l'outil Feedly qui permet de rassembler plusieurs flux RSS, ainsi que des alertes Google. Cela me permet d'avoir des sources d'information différentes.
-              Je consomme également du contenu en format vidéo YouTube sur les news de la Tech.
-            </p>
+
+        <!-- Intro + outils -->
+        <div class="veille-intro-row">
+          <p class="veille-intro-text">
+            Surveillance systématique des évolutions technologiques sur deux thèmes clés du secteur IT.
+            Méthodologie basée sur plusieurs sources complémentaires :
+          </p>
+          <div class="veille-tools">
+            <span class="veille-tool"><i class="bi bi-rss-fill"></i> Feedly</span>
+            <span class="veille-tool"><i class="bi bi-bell-fill"></i> Google Alerts</span>
+            <span class="veille-tool"><i class="bi bi-youtube"></i> YouTube</span>
           </div>
-  
-          <!-- Partie Droite : Boutons -->
-          <div class="col-lg-5 d-flex gap-3 justify-content-lg-end justify-content-start flex-wrap">
-            <a class="window-btn" href="Methode_veille_techno.pdf" target="_blank" rel="noopener">
-              <i class="fas fa-code me-2"></i>Rapport de veille
-            </a>
-            <a class="window-btn" href="Methode_veille_techno.pdf" target="_blank" rel="noopener">
-              <i class="fas fa-code me-2"></i>Mise en œuvre
-            </a>
-          </div>
-  
         </div>
+
+        <!-- Deux cartes thèmes -->
+        <div class="row g-4 mt-1">
+
+          <!-- Thème 1 : Virtualisation -->
+          <div class="col-lg-6">
+            <div class="veille-topic">
+              <div class="veille-illu">
+                <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <!-- Serveur base -->
+                  <rect x="25" y="95" width="150" height="28" rx="4" fill="#AF7EFF" stroke="#000" stroke-width="2.5"/>
+                  <rect x="35" y="103" width="55" height="6" rx="2" fill="#fff" opacity="0.45"/>
+                  <circle cx="158" cy="109" r="5" fill="#4ade80" stroke="#000" stroke-width="1.5"/>
+                  <circle cx="145" cy="109" r="5" fill="#FFB6E6" stroke="#000" stroke-width="1.5"/>
+                  <!-- VM 1 -->
+                  <g class="veille-vm-1">
+                    <rect x="25" y="58" width="66" height="28" rx="3" fill="#FFB6E6" stroke="#000" stroke-width="2.5"/>
+                    <text x="33" y="70" font-size="7.5" font-weight="900" fill="#000" font-family="Montserrat,sans-serif">VM 01</text>
+                    <rect x="33" y="73" width="32" height="4" rx="1" fill="#000" opacity="0.2"/>
+                  </g>
+                  <!-- VM 2 -->
+                  <g class="veille-vm-2">
+                    <rect x="109" y="58" width="66" height="28" rx="3" fill="#B3E5FC" stroke="#000" stroke-width="2.5"/>
+                    <text x="117" y="70" font-size="7.5" font-weight="900" fill="#000" font-family="Montserrat,sans-serif">VM 02</text>
+                    <rect x="117" y="73" width="32" height="4" rx="1" fill="#000" opacity="0.2"/>
+                  </g>
+                  <!-- VM 3 en haut -->
+                  <g class="veille-vm-3">
+                    <rect x="67" y="18" width="66" height="28" rx="3" fill="#C8B6FF" stroke="#000" stroke-width="2.5"/>
+                    <text x="75" y="30" font-size="7.5" font-weight="900" fill="#000" font-family="Montserrat,sans-serif">VM 03</text>
+                    <rect x="75" y="33" width="32" height="4" rx="1" fill="#000" opacity="0.2"/>
+                  </g>
+                  <!-- Lignes de connexion -->
+                  <line x1="58" y1="86" x2="100" y2="46" stroke="#000" stroke-width="1.5" stroke-dasharray="4 3"/>
+                  <line x1="142" y1="86" x2="100" y2="46" stroke="#000" stroke-width="1.5" stroke-dasharray="4 3"/>
+                </svg>
+              </div>
+              <div class="veille-topic-body">
+                <span class="veille-topic-num">01</span>
+                <h3 class="veille-topic-title">Virtualisation des Systèmes</h3>
+                <p class="veille-topic-desc">Hyperviseurs (Proxmox, VMware), conteneurs Docker, orchestration et isolation des environnements.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Thème 2 : Informatique Quantique -->
+          <div class="col-lg-6">
+            <div class="veille-topic">
+              <div class="veille-illu">
+                <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <!-- Orbites statiques -->
+                  <ellipse cx="100" cy="65" rx="72" ry="26" fill="none" stroke="#AF7EFF" stroke-width="1.8" opacity="0.5"/>
+                  <ellipse cx="100" cy="65" rx="72" ry="26" fill="none" stroke="#FFB6E6" stroke-width="1.8" opacity="0.5" transform="rotate(60 100 65)"/>
+                  <ellipse cx="100" cy="65" rx="72" ry="26" fill="none" stroke="#B3E5FC" stroke-width="1.8" opacity="0.5" transform="rotate(-60 100 65)"/>
+                  <!-- Noyau -->
+                  <circle cx="100" cy="65" r="16" fill="#AF7EFF" stroke="#000" stroke-width="2.5"/>
+                  <text x="100" y="70" text-anchor="middle" font-size="11" font-weight="900" fill="#fff" font-family="Montserrat,sans-serif">Q</text>
+                  <!-- Electrons animés -->
+                  <g class="veille-orbit-1" style="transform-origin:100px 65px;">
+                    <circle cx="172" cy="65" r="7" fill="#FFB6E6" stroke="#000" stroke-width="2"/>
+                  </g>
+                  <g class="veille-orbit-2" style="transform-origin:100px 65px;">
+                    <circle cx="172" cy="65" r="7" fill="#B3E5FC" stroke="#000" stroke-width="2"/>
+                  </g>
+                  <g class="veille-orbit-3" style="transform-origin:100px 65px;">
+                    <circle cx="172" cy="65" r="7" fill="#C8B6FF" stroke="#000" stroke-width="2"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="veille-topic-body">
+                <span class="veille-topic-num">02</span>
+                <h3 class="veille-topic-title">Informatique Quantique</h3>
+                <p class="veille-topic-desc">Qubits, superposition, intrication quantique et impact sur la cryptographie post-quantique.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Boutons documents -->
+        <div class="d-flex gap-3 mt-4 flex-wrap">
+          <a class="window-btn" href="documents/Methode_veille_techno.pdf" target="_blank" rel="noopener">
+            <i class="bi bi-file-text me-2"></i>Rapport de veille
+          </a>
+          <a class="window-btn" href="documents/Methode_veille_techno.pdf" target="_blank" rel="noopener">
+            <i class="bi bi-gear me-2"></i>Mise en œuvre
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -896,42 +1079,93 @@
 
   // Initialisation de Typed.js sur la span .typed
   var typed = new Typed('.typed', {
-    strings: [
-      "BTS SIO, option SISR"
-    ],
-    typeSpeed: 120,    // vitesse de frappe
-    backSpeed: 80,    // vitesse d'effacement
-    loop: true        // effet en boucle
+    strings: ["BTS SIO, option SISR"],
+    typeSpeed: 120,
+    backSpeed: 80,
+    loop: true
+  });
+
+  // Loader — animation pixel game
+  const loader = document.getElementById("loader");
+  const loaderBar = document.getElementById("loader-bar");
+  const loaderPercent = document.getElementById("loader-percent");
+
+  function hideLoader() {
+    loader.classList.add("loader-hidden");
+    loader.addEventListener("transitionend", () => loader.remove(), { once: true });
+  }
+
+  let progress = 0;
+  const loaderInterval = setInterval(() => {
+    progress += Math.random() * 5 + 1.5;
+    if (progress >= 100) {
+      progress = 100;
+      clearInterval(loaderInterval);
+      setTimeout(hideLoader, 350);
+    }
+    if (loaderBar) loaderBar.style.width = progress + "%";
+    if (loaderPercent) loaderPercent.textContent = Math.floor(progress) + "%";
+  }, 40);
+
+  // Fallback
+  setTimeout(hideLoader, 3500);
+
+  // Filtre compétences — section Projets
+  document.querySelectorAll(".comp-filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".comp-filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const filter = btn.dataset.filter;
+      document.querySelectorAll(".competence-block").forEach(block => {
+        block.style.display = (filter === "all" || block.dataset.comp === filter) ? "block" : "none";
+      });
+    });
   });
 </script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const track = document.getElementById("track");
-  const prevBtn = document.getElementById("prev-btn");
-  const nextBtn = document.getElementById("next-btn");
-
-  // On récupère la largeur d'une carte + le gap dynamiquement
-  // (Cela permet de changer le CSS sans casser le JS)
-  const getScrollAmount = () => {
-    const card = track.querySelector("article");
-    if (!card) return 300; // Valeur par défaut
-    const style = window.getComputedStyle(track);
-    const gap = parseInt(style.gap) || 32; // 2rem approx 32px
-    return card.offsetWidth + gap;
-  };
-
-  nextBtn.addEventListener("click", () => {
-    track.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
-  });
-
-  prevBtn.addEventListener("click", () => {
-    track.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
-  });
-});
-
-</script>
 
 
+
+<!-- MODAL TABLEAU DE SYNTHESE E5 -->
+<div class="modal fade" id="syntheseModal" tabindex="-1" aria-labelledby="syntheseModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content schema-modal-content" style="background-color:#ff66a3;">
+      <div class="modal-header schema-modal-header">
+        <h5 class="modal-title" id="syntheseModalLabel">Tableau de synthèse — E5</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body p-0">
+        <iframe src="documents/E5.pdf" class="synthese-iframe" title="Tableau de synthèse E5"></iframe>
+      </div>
+      <div class="modal-footer" style="border-top:3px solid #000; justify-content:center; gap:0.75rem; background:rgba(255,255,255,0.1);">
+        <button type="button" class="btn schema-modal-btn" data-bs-dismiss="modal">Fermer</button>
+        <a href="documents/E5.pdf" target="_blank" class="btn schema-modal-btn-dl">
+          <i class="bi bi-box-arrow-up-right me-1"></i> Ouvrir dans un onglet
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL SCHEMA RESEAU -->
+<div class="modal fade" id="schemaModal" tabindex="-1" aria-labelledby="schemaModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content schema-modal-content">
+      <div class="modal-header schema-modal-header">
+        <h5 class="modal-title" id="schemaModalLabel">Schéma réseau — Infrastructure</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body p-3 text-center">
+        <img src="images/schema_reseau.png" alt="Schéma réseau de l'infrastructure" class="img-fluid schema-modal-img">
+      </div>
+      <div class="modal-footer schema-modal-footer">
+        <button type="button" class="btn schema-modal-btn" data-bs-dismiss="modal">Fermer</button>
+        <a href="images/schema_reseau.png" download class="btn schema-modal-btn-dl">
+          <i class="bi bi-download me-1"></i> Télécharger
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- MODAL ALTERNANCE -->
 <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
@@ -944,7 +1178,7 @@
       </div>
       <!-- Suppression de bg-body-tertiary pour laisser voir le rose -->
       <div class="modal-body text-center p-5">
-        <img src="macif.png" alt="Logo Macif" class="mb-3" style="width: 100px; height: 100px; object-fit: contain; border: 3px solid black; box-shadow: 4px 4px 0 black;">
+        <img src="images/macif.png" alt="Logo Macif" class="mb-3" style="width: 100px; height: 100px; object-fit: contain; border: 3px solid black; box-shadow: 4px 4px 0 black;">
         <p class="fs-6 mt-3"> <!-- fs-6 un peu plus petit pour le style Montserrat -->
           <strong>En tant que Chargée d'assistance utilisateurs, mes missions principales sont :</strong>
 <br><br>
@@ -961,9 +1195,6 @@
 - Participation active aux projets informatiques : migration ou renouvellement du parc, accompagnement au changement <br><br>
 À travers ces missions, je contribue au maintien opérationnel du SI et à la satisfaction des utilisateurs, tout en participant à l’évolution des outils et des pratiques au sein de l’entreprise.
 </p>
-          <!-- Ton contenu texte reste ici -->
-          ...
-        </p>
       </div>
       <div class="modal-footer">
         <!-- Suppression des classes Bootstrap classiques pour utiliser notre style perso -->

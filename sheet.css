@@ -583,22 +583,20 @@
 .carousel-track::-webkit-scrollbar { display: none; }
 
 
-/* Lien transparent autour des cartes — reprend les props flex de l'article */
-.article-card-link {
+/* Lien invisible couvrant toute la carte (cover link pattern) */
+.article-cover-link {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  border-radius: 20px;
   text-decoration: none;
-  color: inherit;
-  display: block;
-  flex: 0 0 var(--card-width);
-  height: var(--card-height);
-  scroll-snap-align: center;
-  cursor: pointer;
 }
 
 /* --- STYLE DE LA CARTE (Article) --- */
 .carousel-track article {
-  /* Remplit le lien parent */
-  width: 100%;
-  height: 100%;
+  /* Dimensions fixes — flex item direct */
+  flex: 0 0 var(--card-width);
+  height: var(--card-height);
 
   /* Style de base "Neon Card" */
   background: var(--neon-bg);
@@ -610,9 +608,10 @@
   border-radius: 20px;
 
   /* Comportement */
+  cursor: pointer;
+  scroll-snap-align: center;
   transition: transform 0.2s;
 
-  /* On retire les bordures/styles de l'ancien design */
   border: none;
   box-shadow: none;
   color: white;

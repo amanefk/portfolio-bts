@@ -583,19 +583,23 @@
 .carousel-track::-webkit-scrollbar { display: none; }
 
 
-/* Lien transparent autour des cartes */
+/* Lien transparent autour des cartes — reprend les props flex de l'article */
 .article-card-link {
   text-decoration: none;
   color: inherit;
-  display: contents; /* transparent pour le layout flex */
+  display: block;
+  flex: 0 0 var(--card-width);
+  height: var(--card-height);
+  scroll-snap-align: center;
+  cursor: pointer;
 }
 
 /* --- STYLE DE LA CARTE (Article) --- */
 .carousel-track article {
-  /* Dimensions fixes */
-  flex: 0 0 var(--card-width);
-  height: var(--card-height);
-  
+  /* Remplit le lien parent */
+  width: 100%;
+  height: 100%;
+
   /* Style de base "Neon Card" */
   background: var(--neon-bg);
   position: relative;
@@ -604,16 +608,14 @@
   place-items: center;
   overflow: hidden;
   border-radius: 20px;
-  
+
   /* Comportement */
-  cursor: pointer;
-  scroll-snap-align: center;
   transition: transform 0.2s;
-  
+
   /* On retire les bordures/styles de l'ancien design */
   border: none;
   box-shadow: none;
-  color: white; /* Texte blanc sur fond sombre */
+  color: white;
 }
 
 /* Effet Hover (Zoom) */
@@ -627,7 +629,7 @@
    ou directement si tu as gardé ta structure.
    L'important : Z-INDEX > 1 pour passer au-dessus du pseudo-élément */
 
-.carousel-track > article .content {
+.carousel-track article .content {
   /* Si tu as entouré ton contenu d'une div class="content" comme suggéré */
   z-index: 5;
   position: absolute;

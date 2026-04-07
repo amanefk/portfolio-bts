@@ -165,7 +165,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 340px;
+  width: 340px;
+  height: 340px;
+  margin: 0 auto;
 }
 
 .hero-photo-frame {
@@ -199,10 +201,10 @@
   animation: hero-badge-float 3s ease-in-out infinite;
 }
 
-.hfb-1 { top: 5%;  left: 0%;   background: #FFB6E6; transform: rotate(-3deg); animation-delay: 0s; }
-.hfb-2 { top: 20%; right: 0%;  background: #AF7EFF; color: #fff; transform: rotate(2deg); animation-delay: 0.6s; }
-.hfb-3 { bottom: 20%; left: 0%; background: #fff;  transform: rotate(-2deg); animation-delay: 1.2s; }
-.hfb-4 { bottom: 5%; right: 2%; background: #FFD7ED; transform: rotate(3deg); animation-delay: 1.8s; }
+.hfb-1 { top: 2%;    left: -10px;  background: #FFB6E6; transform: rotate(-3deg); animation-delay: 0s; }
+.hfb-2 { top: 15%;  right: -10px; background: #AF7EFF; color: #fff; transform: rotate(2deg); animation-delay: 0.6s; }
+.hfb-3 { bottom: 18%; left: -10px; background: #fff; transform: rotate(-2deg); animation-delay: 1.2s; }
+.hfb-4 { bottom: 3%;  right: -5px; background: #FFD7ED; transform: rotate(3deg); animation-delay: 1.8s; }
 
 /* Étoiles flottantes */
 .hero-float-star {
@@ -212,9 +214,9 @@
   animation: hero-badge-float 2.5s ease-in-out infinite;
   color: #AF7EFF;
 }
-.hfs-1 { top: 2%;   right: 20%; font-size: 1.4rem; color: #FF66A3; animation-delay: 0.3s; }
-.hfs-2 { bottom: 28%; left: 8%; font-size: 1rem;   color: #AF7EFF; animation-delay: 0.9s; }
-.hfs-3 { bottom: 5%; left: 25%; font-size: 0.9rem; color: #FFB6E6; animation-delay: 1.5s; }
+.hfs-1 { top: 0%;    right: 15%; font-size: 1.4rem; color: #FF66A3; animation-delay: 0.3s; }
+.hfs-2 { bottom: 25%; left: 5%;  font-size: 1rem;   color: #AF7EFF; animation-delay: 0.9s; }
+.hfs-3 { bottom: 2%;  left: 30%; font-size: 0.9rem; color: #FFB6E6; animation-delay: 1.5s; }
 
 @keyframes hero-badge-float {
   0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }

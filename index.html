@@ -59,8 +59,8 @@
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item tanjiro"><a class="nav-link" href="#">Accueil</a></li>
           <li class="nav-item tanjiro"><a class="nav-link" href="#apropos">À propos</a></li>
-          <li class="nav-item tanjiro"><a class="nav-link" href="#projets">Projets</a></li>
-          <li class="nav-item tanjiro"><a class="nav-link" href="#epreuves">Épreuves</a></li>
+          <li class="nav-item tanjiro"><a class="nav-link" href="#projets">Réalisations</a></li>
+          <li class="nav-item tanjiro"><a class="nav-link" href="#epreuves">Dév. Professionnel</a></li>
           <li class="nav-item tanjiro"><a class="nav-link" href="#veille">Veille</a></li>
         </ul>
       </div>
@@ -122,10 +122,10 @@
           <div class="hero-photo-wrapper">
 
             <!-- Badges flottants -->
-            <div class="hero-float-badge hfb-1">🐧 Linux</div>
-            <div class="hero-float-badge hfb-2">🌐 Réseaux</div>
-            <div class="hero-float-badge hfb-3">🖥️ Windows Server</div>
-            <div class="hero-float-badge hfb-4">☁️ Proxmox</div>
+            <div class="hero-float-badge hfb-1"><i class="bi bi-terminal-fill me-1"></i>Linux</div>
+            <div class="hero-float-badge hfb-2"><i class="bi bi-diagram-3-fill me-1"></i>Réseaux</div>
+            <div class="hero-float-badge hfb-3"><i class="bi bi-windows me-1"></i>Windows Server</div>
+            <div class="hero-float-badge hfb-4"><i class="bi bi-server me-1"></i>Proxmox</div>
             <div class="hero-float-star hfs-1">✦</div>
             <div class="hero-float-star hfs-2">♥</div>
             <div class="hero-float-star hfs-3">✦</div>
@@ -605,7 +605,7 @@
       <div>
         <h5 class="fw-black text-uppercase mb-2" style="font-size: 1em;">Mon Objectif : Ingénieure</h5>
         <p class="small mb-0" style="line-height: 1.5;">
-          Intégrer une <strong>école d'ingénieurs</strong> spécialisée en informatique (Focus Systèmes & Réseaux).
+          Intégrer <strong>ESIEE Paris</strong> en cycle ingénieur <strong>Réseaux &amp; Sécurité</strong>.
           <br><br>
           <em>Ambition :</em> Devenir un pilier dans la conception et la sécurisation d'architectures complexes au sein des entreprises.
         </p>
@@ -650,22 +650,29 @@
 <section id="projets">
 
   <div class="container section-title text-center mt-5" data-aos="fade-up">
-    <h2 class="text-pastel-bleu font-weight-bold highlight tanjiro">PROJETS</h2>
+    <h2 class="text-pastel-bleu font-weight-bold highlight tanjiro">RÉALISATIONS PROFESSIONNELLES</h2>
     <br>
     <p class="fs-5 mb-4 text-center mx-auto" style="max-width: 800px;">
       Mes réalisations scolaires et professionnelles, organisées selon les compétences du référentiel BTS SIO SISR.
       Chaque section correspond à une compétence du tableau de synthèse E5.
     </p>
 
-    <!-- Boutons filtres compétences -->
-    <div class="comp-filters" data-aos="fade-up" data-aos-delay="100">
+    <!-- Filtres par segment -->
+    <div class="comp-filters" data-aos="fade-up" data-aos-delay="50">
+      <button class="seg-filter-btn active" data-seg="all">Tout</button>
+      <button class="seg-filter-btn" data-seg="scolaire">Scolaire</button>
+      <button class="seg-filter-btn" data-seg="pro">Professionnel</button>
+      <button class="seg-filter-btn" data-seg="perso">Personnel</button>
+    </div>
+
+    <!-- Filtres par compétence BTS SIO -->
+    <div class="comp-filters mt-2" data-aos="fade-up" data-aos-delay="100">
       <button class="comp-filter-btn active" data-filter="all">Toutes</button>
-      <button class="comp-filter-btn" data-filter="c1">C1 — Patrimoine</button>
-      <button class="comp-filter-btn" data-filter="c2">C2 — Incidents</button>
-      <button class="comp-filter-btn" data-filter="c3">C3 — Présence web</button>
-      <button class="comp-filter-btn" data-filter="c4">C4 — Mode projet</button>
-      <button class="comp-filter-btn" data-filter="c5">C5 — Mise à dispo</button>
-      <button class="comp-filter-btn" data-filter="c6">C6 — Dév. pro</button>
+      <button class="comp-filter-btn" data-filter="c1">GÉRER LE PATRIMOINE</button>
+      <button class="comp-filter-btn" data-filter="c2">RÉPONDRE AUX INCIDENTS</button>
+      <button class="comp-filter-btn" data-filter="c3">DÉVELOPPER LA PRÉSENCE EN LIGNE</button>
+      <button class="comp-filter-btn" data-filter="c4">TRAVAILLER EN MODE PROJET</button>
+      <button class="comp-filter-btn" data-filter="c5">MISE À DISPOSITION</button>
     </div>
   </div>
 
@@ -682,26 +689,29 @@
       </div>
       <div class="carousel-wrapper">
         <div class="carousel-track">
-          <article><a href="documents/docproxmoxinstall.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/docproxmoxinstall.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/proxmoxlogo.jpg" alt="Proxmox"><h4>Installation de Proxmox sur un serveur</h4></div>
           </article>
-          <article><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/adlogo.jpg" alt="AD DS"><h4>Installation du service AD DS sur Windows Server</h4></div>
           </article>
-          <article><a href="documents/docproxmoxvm.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/docproxmoxvm.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/vmlogo.jpg" alt="VM"><h4>Déploiement de machines virtuelles sur Proxmox</h4></div>
           </article>
-          <article><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/gpologo.jpg" alt="GPO"><h4>Mise en place de stratégies de groupe (GPO)</h4></div>
           </article>
-          <article><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/wordpresslogo.jpg" alt="Wordpress"><h4>Déploiement sécurisé de Wordpress</h4></div>
           </article>
-          <article><a href="documents/docdhcpwinserver.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/docdhcpwinserver.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/dhcplogo.png" alt="DHCP"><h4>Mise en œuvre du service DHCP sur Windows Server</h4></div>
           </article>
-          <article><a href="documents/MOP_Fabrication_Postes.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="pro"><a href="documents/MOP_Fabrication_Postes.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/windows_logo.webp" alt="Fabrication poste"><h4>Fabrication d’un poste de travail Windows</h4></div>
+          </article>
+          <article data-segment="perso"><a href="#" class="article-cover-link" aria-label="Lab Personnel"></a>
+            <div class="content"><img src="images/proxmoxlogo.jpg" alt="Homelab"><h4>Lab Personnel : Raspberry Pi + pfSense + Station météo</h4></div>
           </article>
         </div>
       </div>
@@ -718,19 +728,19 @@
       </div>
       <div class="carousel-wrapper">
         <div class="carousel-track">
-          <article><a href="documents/MOP_Gestion_incidents.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="pro"><a href="documents/MOP_Gestion_incidents.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/easyvista.png" alt="EasyVista"><h4>Gestion des demandes & incidents via EasyVista</h4></div>
           </article>
-          <article><a href="documents/MOP_Fabrication_Postes.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="pro"><a href="documents/MOP_Fabrication_Postes.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/windows_logo.webp" alt="Fabrication poste"><h4>Fabrication d’un poste de travail Windows</h4></div>
           </article>
-          <article><a href="documents/MOP_Fabrication_Postes.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="pro"><a href="documents/MOP_Fabrication_Postes.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/glpi.png" alt="GLPI"><h4>Installation et configuration de la solution GLPI</h4></div>
           </article>
-          <article><a href="documents/MOP_Gestiondeprojet.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="pro"><a href="documents/MOP_Gestiondeprojet.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/thinkpad.webp" alt="Gestion projet"><h4>Gestion de projet : remplacement de postes obsolètes</h4></div>
           </article>
-          <article><a href="documents/MOP_Changementmdp.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="pro"><a href="documents/MOP_Changementmdp.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/password.jpg" alt="MDP"><h4>Réinitialisation ou modification d’un mot de passe utilisateur</h4></div>
           </article>
         </div>
@@ -748,7 +758,7 @@
       </div>
       <div class="carousel-wrapper">
         <div class="carousel-track">
-          <article><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/wordpresslogo.jpg" alt="Wordpress"><h4>Déploiement sécurisé de Wordpress</h4></div>
           </article>
         </div>
@@ -766,7 +776,7 @@
       </div>
       <div class="carousel-wrapper">
         <div class="carousel-track">
-          <article><a href="documents/MOP_Gestiondeprojet.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="pro"><a href="documents/MOP_Gestiondeprojet.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/thinkpad.webp" alt="Gestion projet"><h4>Gestion de projet : remplacement de postes obsolètes</h4></div>
           </article>
         </div>
@@ -784,28 +794,28 @@
       </div>
       <div class="carousel-wrapper">
         <div class="carousel-track">
-          <article><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/gpologo.jpg" alt="GPO"><h4>Mise en place de stratégies de groupe (GPO)</h4></div>
           </article>
-          <article><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/wordpresslogo.jpg" alt="Wordpress"><h4>Déploiement sécurisé de Wordpress</h4></div>
           </article>
-          <article><a href="documents/docdhcpwinserver.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/docdhcpwinserver.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/dhcplogo.png" alt="DHCP"><h4>Mise en œuvre du service DHCP sur Windows Server</h4></div>
           </article>
-          <article><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/vmlogo.jpg" alt="VM"><h4>Déploiement de machines virtuelles sur Proxmox</h4></div>
           </article>
-          <article><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/adlogo.jpg" alt="AD DS"><h4>Installation du service AD DS sur Windows Server</h4></div>
           </article>
-          <article><a href="documents/docproxmoxinstall.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/docproxmoxinstall.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/proxmoxlogo.jpg" alt="Proxmox"><h4>Installation de Proxmox sur un serveur</h4></div>
           </article>
-          <article><a href="documents/MOP_Fabrication_Postes.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="pro"><a href="documents/MOP_Fabrication_Postes.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/windows_logo.webp" alt="Fabrication poste"><h4>Fabrication d’un poste de travail Windows</h4></div>
           </article>
-          <article><a href="documents/MOP_Gestiondeprojet.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="pro"><a href="documents/MOP_Gestiondeprojet.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/thinkpad.webp" alt="Gestion projet"><h4>Gestion de projet : remplacement de postes obsolètes</h4></div>
           </article>
         </div>
@@ -823,7 +833,7 @@
       </div>
       <div class="carousel-wrapper">
         <div class="carousel-track">
-          <article><a href="documents/Methode_veille_techno.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
+          <article data-segment="scolaire"><a href="documents/Methode_veille_techno.pdf" target="_blank" rel="noopener" class="article-cover-link" aria-label="Ouvrir le PDF"></a>
             <div class="content"><img src="images/veille.webp" alt="Veille"><h4>Veille technologique</h4></div>
           </article>
         </div>
@@ -835,7 +845,7 @@
  <!-- SECTION EPREUVES -->
  <section id="epreuves">
   <div class="container py-4">
-    <h2 style="text-align: center" class="pb-2 border-bottom tanjiro">Tableau de synthèse & Épreuves</h2><br>
+    <h2 style="text-align: center" class="pb-2 border-bottom tanjiro">Développement professionnel</h2><br>
 
     <!-- Conteneur du Carousel -->
     <div class="conteneur-pro">
@@ -995,6 +1005,9 @@
                 <span class="veille-topic-num">01</span>
                 <h3 class="veille-topic-title">Virtualisation des Systèmes</h3>
                 <p class="veille-topic-desc">Hyperviseurs (Proxmox, VMware), conteneurs Docker, orchestration et isolation des environnements.</p>
+                <a href="https://www.it-connect.fr/proxmox-ve-9-1-est-disponible-quelles-sont-les-nouveautes/" target="_blank" rel="noopener" class="veille-source-link">
+                  <i class="bi bi-file-earmark-text me-1"></i>IT-Connect — Proxmox VE 9.1 : les nouveautés
+                </a>
               </div>
             </div>
           </div>
@@ -1027,6 +1040,9 @@
                 <span class="veille-topic-num">02</span>
                 <h3 class="veille-topic-title">Informatique Quantique</h3>
                 <p class="veille-topic-desc">Qubits, superposition, intrication quantique et impact sur la cryptographie post-quantique.</p>
+                <a href="https://cyber.gouv.fr/cryptographie-post-quantique-faq" target="_blank" rel="noopener" class="veille-source-link">
+                  <i class="bi bi-shield-lock me-1"></i>ANSSI — FAQ Cryptographie post-quantique
+                </a>
               </div>
             </div>
           </div>
@@ -1061,10 +1077,10 @@
       <a href="#" class="nav-link px-2 text-body-secondary">A propos</a>
     </li>
     <li class="nav-item">
-      <a href="#" class="nav-link px-2 text-body-secondary">Projets</a>
+      <a href="#" class="nav-link px-2 text-body-secondary">Réalisations</a>
     </li>
     <li class="nav-item">
-      <a href="#" class="nav-link px-2 text-body-secondary">Épreuves</a>
+      <a href="#" class="nav-link px-2 text-body-secondary">Dév. Professionnel</a>
     </li>
     <li class="nav-item">
       <a href="#" class="nav-link px-2 text-body-secondary">Veille</a>
@@ -1120,15 +1136,38 @@
   // Fallback
   setTimeout(hideLoader, 3500);
 
-  // Filtre compétences — section Projets
+  // Filtres réalisations
+  let activeComp = "all";
+  let activeSeg  = "all";
+
+  function applyFilters() {
+    document.querySelectorAll(".competence-block").forEach(block => {
+      const compMatch = (activeComp === "all" || block.dataset.comp === activeComp);
+      block.style.display = compMatch ? "block" : "none";
+      if (compMatch) {
+        block.querySelectorAll("article").forEach(art => {
+          const segMatch = (activeSeg === "all" || art.dataset.segment === activeSeg);
+          art.style.display = segMatch ? "" : "none";
+        });
+      }
+    });
+  }
+
   document.querySelectorAll(".comp-filter-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       document.querySelectorAll(".comp-filter-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
-      const filter = btn.dataset.filter;
-      document.querySelectorAll(".competence-block").forEach(block => {
-        block.style.display = (filter === "all" || block.dataset.comp === filter) ? "block" : "none";
-      });
+      activeComp = btn.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  document.querySelectorAll(".seg-filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".seg-filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeSeg = btn.dataset.seg;
+      applyFilters();
     });
   });
 </script>

@@ -504,10 +504,7 @@
         <span class="price-currency">@</span>CV
         <span class="price-period">Format PDF</span>
       </div>
-      <!-- Remplace 'mon_cv.pdf' par le vrai lien de ton CV -->
-      <a href="documents/CV.pdf" target="_blank" class="text-decoration-none">
-        <button class="card-button">Télécharger</button>
-      </a>
+      <button class="card-button" data-bs-toggle="modal" data-bs-target="#cvModal">Télécharger</button>
     </div>
 
   </div>
@@ -1153,6 +1150,30 @@
         <button type="button" class="btn schema-modal-btn" data-bs-dismiss="modal">Fermer</button>
         <a href="documents/E5.pdf" target="_blank" class="btn schema-modal-btn-dl">
           <i class="bi bi-box-arrow-up-right me-1"></i> Ouvrir dans un onglet
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CV -->
+<div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content schema-modal-content" style="background-color:#AF7EFF;">
+      <div class="modal-header schema-modal-header">
+        <h5 class="modal-title" id="cvModalLabel">CV — Amina Fakhir</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body p-0">
+        <iframe src="documents/CV.pdf" class="synthese-iframe" title="CV Amina Fakhir"></iframe>
+      </div>
+      <div class="modal-footer" style="border-top:3px solid #000; justify-content:center; gap:0.75rem; background:rgba(255,255,255,0.1);">
+        <button type="button" class="btn schema-modal-btn" data-bs-dismiss="modal">Fermer</button>
+        <a href="documents/CV.pdf" target="_blank" class="btn schema-modal-btn-dl">
+          <i class="bi bi-box-arrow-up-right me-1"></i> Ouvrir dans un onglet
+        </a>
+        <a href="documents/CV.pdf" download class="btn schema-modal-btn-dl">
+          <i class="bi bi-download me-1"></i> Télécharger
         </a>
       </div>
     </div>
